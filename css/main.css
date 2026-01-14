@@ -1,0 +1,410 @@
+/**
+ * MAIN.CSS - Foundation Layer
+ * ===========================
+ * Core styles, CSS variables, typography, and base element styles.
+ * This file provides the foundation for the entire website's design system.
+ */
+
+/* ==================
+   CSS Custom Properties (Design Tokens)
+   ================== */
+
+:root {
+  /*
+   * Color Palette - Pastel Theme
+   * Soft, playful colors for a modern, friendly feel
+   */
+
+  /* Primary Colors */
+  --primary: #FFB3D9;           /* Soft pink - main brand color */
+  --primary-light: #FFD9EC;     /* Lighter pink - hover states */
+  --primary-dark: #FF8DC7;      /* Darker pink - active states */
+
+  /* Secondary Colors */
+  --secondary: #B5E8FF;         /* Sky blue - calm, professional */
+  --secondary-light: #D9F3FF;   /* Lighter blue */
+  --secondary-dark: #8CDCFF;    /* Darker blue */
+
+  /* Accent Colors */
+  --accent: #D4B5FF;            /* Lavender - creative touch */
+  --accent-light: #EAD9FF;      /* Lighter lavender */
+  --mint: #B5FFD9;              /* Mint green - fresh, energetic */
+  --peach: #FFD9B5;             /* Peach - warm, inviting */
+
+  /* Neutral Colors */
+  --white: #FFFFFF;
+  --off-white: #FAFAFA;
+  --light-gray: #F0F0F0;
+  --gray: #E0E0E0;
+  --dark-gray: #666666;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-light: #999999;
+
+  /* Semantic Colors */
+  --success: #B5FFD9;
+  --warning: #FFD9B5;
+  --error: #FFB3B3;
+  --info: #B5E8FF;
+
+  /*
+   * Typography
+   * Using system fonts for performance and readability
+   */
+  --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-heading: 'Georgia', 'Times New Roman', serif;
+  --font-mono: 'Monaco', 'Courier New', monospace;
+
+  /* Font Sizes - Modular Scale (1.250 - Major Third) */
+  --font-xs: 0.75rem;      /* 12px */
+  --font-sm: 0.875rem;     /* 14px */
+  --font-base: 1rem;       /* 16px */
+  --font-md: 1.125rem;     /* 18px */
+  --font-lg: 1.25rem;      /* 20px */
+  --font-xl: 1.563rem;     /* 25px */
+  --font-2xl: 1.953rem;    /* 31px */
+  --font-3xl: 2.441rem;    /* 39px */
+  --font-4xl: 3.052rem;    /* 49px */
+
+  /* Font Weights */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /*
+   * Spacing Scale
+   * Based on 8px grid system for consistent spacing
+   */
+  --spacing-xs: 0.5rem;    /* 8px */
+  --spacing-sm: 1rem;      /* 16px */
+  --spacing-md: 1.5rem;    /* 24px */
+  --spacing-lg: 2rem;      /* 32px */
+  --spacing-xl: 3rem;      /* 48px */
+  --spacing-2xl: 4rem;     /* 64px */
+  --spacing-3xl: 6rem;     /* 96px */
+
+  /*
+   * Layout
+   */
+  --max-width: 1200px;
+  --max-width-narrow: 800px;
+  --max-width-wide: 1400px;
+
+  --header-height: 70px;
+
+  /*
+   * Border Radius - Rounded, playful feel
+   */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /*
+   * Shadows - Soft, subtle depth
+   */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.15);
+
+  /*
+   * Transitions - Smooth, polished interactions
+   */
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 250ms ease-in-out;
+  --transition-slow: 400ms ease-in-out;
+
+  /*
+   * Z-index Scale
+   */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+}
+
+
+/* ==================
+   CSS Reset & Normalization
+   ================== */
+
+/* Box sizing reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default margins */
+body,
+h1, h2, h3, h4, h5, h6,
+p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a class */
+ul[class],
+ol[class] {
+  list-style: none;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: var(--line-height-normal);
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+/* ==================
+   Base Typography
+   ================== */
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-base);
+  line-height: var(--line-height-normal);
+  color: var(--text-primary);
+  background-color: var(--off-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+h1 {
+  font-size: var(--font-4xl);
+  margin-bottom: var(--spacing-md);
+}
+
+h2 {
+  font-size: var(--font-3xl);
+}
+
+h3 {
+  font-size: var(--font-2xl);
+}
+
+h4 {
+  font-size: var(--font-xl);
+}
+
+h5 {
+  font-size: var(--font-lg);
+}
+
+h6 {
+  font-size: var(--font-md);
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Links */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Strong and emphasis */
+strong,
+b {
+  font-weight: var(--font-bold);
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+/* Code */
+code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background-color: var(--light-gray);
+  padding: 0.2em 0.4em;
+  border-radius: var(--radius-sm);
+}
+
+
+/* ==================
+   Layout Utilities
+   ================== */
+
+/* Container - constrains content width with padding */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
+}
+
+.container--narrow {
+  max-width: var(--max-width-narrow);
+}
+
+.container--wide {
+  max-width: var(--max-width-wide);
+}
+
+/* Section spacing */
+.section {
+  padding-top: var(--spacing-3xl);
+  padding-bottom: var(--spacing-3xl);
+}
+
+.section--sm {
+  padding-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+}
+
+
+/* ==================
+   Utility Classes
+   ================== */
+
+/* Text alignment */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* Text colors */
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-light { color: var(--text-light); }
+
+/* Spacing utilities */
+.mt-xs { margin-top: var(--spacing-xs); }
+.mt-sm { margin-top: var(--spacing-sm); }
+.mt-md { margin-top: var(--spacing-md); }
+.mt-lg { margin-top: var(--spacing-lg); }
+.mt-xl { margin-top: var(--spacing-xl); }
+
+.mb-xs { margin-bottom: var(--spacing-xs); }
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+.mb-xl { margin-bottom: var(--spacing-xl); }
+
+/* Display utilities */
+.block { display: block; }
+.inline-block { display: inline-block; }
+.flex { display: flex; }
+.inline-flex { display: inline-flex; }
+.grid { display: grid; }
+.hidden { display: none; }
+
+/* Visibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+
+/* ==================
+   Responsive Breakpoints
+   ================== */
+
+/*
+ * Mobile-first approach
+ * Default styles are for mobile, then enhanced for larger screens
+ */
+
+/* Tablet (768px and up) */
+@media (min-width: 768px) {
+  :root {
+    --font-base: 1.125rem;  /* Slightly larger on tablets */
+  }
+
+  .container {
+    padding-left: var(--spacing-lg);
+    padding-right: var(--spacing-lg);
+  }
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3.815rem;  /* Even larger on desktop */
+  }
+
+  .section {
+    padding-top: var(--spacing-3xl);
+    padding-bottom: var(--spacing-3xl);
+  }
+}
+
+/* Large Desktop (1440px and up) */
+@media (min-width: 1440px) {
+  .container {
+    padding-left: var(--spacing-xl);
+    padding-right: var(--spacing-xl);
+  }
+}

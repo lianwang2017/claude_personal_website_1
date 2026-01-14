@@ -1,0 +1,19 @@
+# Images Directory
+
+Place your image assets here:
+- Profile photos
+- Project screenshots
+- Blog post images
+- Icons and graphics
+
+## Recommended Image Formats
+- Use WebP for photos (better compression)
+- Use SVG for icons and logos (scalable)
+- Use PNG for images requiring transparency
+- Optimize all images before adding them
+
+## Naming Convention
+Use descriptive, lowercase names with hyphens:
+- `profile-photo.jpg`
+- `project-coffee-tracker.png`
+- `blog-creativity-header.jpg`

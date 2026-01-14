@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Read my thoughts, ideas, and reflections on life, creativity, and learning">
+  <title>Blog | Personal Website</title>
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__brand">✨ MySite</a>
+
+      <div class="navbar__nav">
+        <a href="index.html" class="navbar__link">Home</a>
+        <a href="about.html" class="navbar__link">About</a>
+        <a href="hobbies.html" class="navbar__link">Hobbies</a>
+        <a href="blog.html" class="navbar__link">Blog</a>
+        <a href="projects.html" class="navbar__link">Projects</a>
+      </div>
+
+      <button class="navbar__toggle" aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="page-content">
+
+    <!-- Blog Header -->
+    <section class="section section--sm">
+      <div class="container">
+        <div class="blog-header">
+          <h1 class="blog-header__title">My Blog ✍️</h1>
+          <p class="blog-header__subtitle">
+            Thoughts, stories, and ideas from my journey
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="section section--sm">
+      <div class="container">
+        <div class="blog-featured">
+          <span class="blog-featured__label">⭐ Featured Post</span>
+
+          <h2 style="font-size: var(--font-3xl); margin-bottom: var(--spacing-md);">
+            The Art of Finding Balance in a Busy World
+          </h2>
+
+          <div class="card__meta mb-md">
+            <span class="blog-card__date">January 12, 2026</span>
+            <span>•</span>
+            <span>8 min read</span>
+          </div>
+
+          <p style="font-size: var(--font-lg); color: var(--text-secondary); line-height: var(--line-height-relaxed); margin-bottom: var(--spacing-lg);">
+            In our always-on, hyper-connected world, finding balance feels like trying to stand still on a moving train. But what if the key isn't about achieving perfect equilibrium, but rather learning to dance with the chaos? This post explores practical strategies for creating harmony between work, creativity, and self-care...
+          </p>
+
+          <div class="blog-card__tags mb-md">
+            <span class="tag tag--primary">Life</span>
+            <span class="tag tag--secondary">Wellness</span>
+            <span class="tag tag--accent">Productivity</span>
+          </div>
+
+          <a href="#" class="btn btn--primary">Read Full Post</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="section">
+      <div class="container">
+
+        <h2 class="text-center mb-xl" style="font-size: var(--font-2xl);">Recent Posts 📝</h2>
+
+        <div class="grid grid--3">
+
+          <!-- Blog Post 1 -->
+          <div class="card blog-card">
+            <div class="card__meta">
+              <span class="blog-card__date">January 10, 2026</span>
+              <span>•</span>
+              <span>5 min read</span>
+            </div>
+            <h3 class="card__title">Reflections on Creativity</h3>
+            <p class="card__description">
+              What does it mean to be creative in the modern world? Exploring the intersection of inspiration, discipline, and the courage to create even when it feels uncomfortable.
+            </p>
+            <div class="blog-card__tags">
+              <span class="tag tag--primary">Creativity</span>
+              <span class="tag">Inspiration</span>
+            </div>
+            <a href="#" class="blog-card__read-more">Read more</a>
+          </div>
+
+          <!-- Blog Post 2 -->
+          <div class="card blog-card">
+            <div class="card__meta">
+              <span class="blog-card__date">January 5, 2026</span>
+              <span>•</span>
+              <span>6 min read</span>
+            </div>
+            <h3 class="card__title">Learning in Public</h3>
+            <p class="card__description">
+              Why I decided to start sharing my journey online, the vulnerability it requires, and the surprising connections that come from being authentic about the learning process.
+            </p>
+            <div class="blog-card__tags">
+              <span class="tag tag--accent">Personal Growth</span>
+              <span class="tag">Learning</span>
+            </div>
+            <a href="#" class="blog-card__read-more">Read more</a>
+          </div>
+
+          <!-- Blog Post 3 -->
+          <div class="card blog-card">
+            <div class="card__meta">
+              <span class="blog-card__date">December 28, 2025</span>
+              <span>•</span>
+              <span>4 min read</span>
+            </div>
+            <h3 class="card__title">My Morning Routine</h3>
+            <p class="card__description">
+              How I transformed my mornings from chaotic to intentional. Small habits that have made a big difference in how I show up for the day ahead.
+            </p>
+            <div class="blog-card__tags">
+              <span class="tag tag--secondary">Habits</span>
+              <span class="tag">Productivity</span>
+            </div>
+            <a href="#" class="blog-card__read-more">Read more</a>
+          </div>
+
+          <!-- Blog Post 4 -->
+          <div class="card blog-card">
+            <div class="card__meta">
+              <span class="blog-card__date">December 20, 2025</span>
+              <span>•</span>
+              <span>7 min read</span>
+            </div>
+            <h3 class="card__title">The Power of Saying No</h3>
+            <p class="card__description">
+              Learning to set boundaries and understanding that every 'yes' to something is a 'no' to something else. How I'm becoming more intentional with my time and energy.
+            </p>
+            <div class="blog-card__tags">
+              <span class="tag tag--primary">Boundaries</span>
+              <span class="tag">Self-Care</span>
+            </div>
+            <a href="#" class="blog-card__read-more">Read more</a>
+          </div>
+
+          <!-- Blog Post 5 -->
+          <div class="card blog-card">
+            <div class="card__meta">
+              <span class="blog-card__date">December 15, 2025</span>
+              <span>•</span>
+              <span>5 min read</span>
+            </div>
+            <h3 class="card__title">Digital Minimalism Experiment</h3>
+            <p class="card__description">
+              Week one of my 30-day digital minimalism challenge. What I've learned about my relationship with technology and the unexpected benefits of being more offline.
+            </p>
+            <div class="blog-card__tags">
+              <span class="tag tag--accent">Technology</span>
+              <span class="tag">Minimalism</span>
+            </div>
+            <a href="#" class="blog-card__read-more">Read more</a>
+          </div>
+
+          <!-- Blog Post 6 -->
+          <div class="card blog-card">
+            <div class="card__meta">
+              <span class="blog-card__date">December 10, 2025</span>
+              <span>•</span>
+              <span>6 min read</span>
+            </div>
+            <h3 class="card__title">Books That Changed My Perspective</h3>
+            <p class="card__description">
+              A curated list of books that have profoundly impacted how I think, work, and live. Plus, why I believe reading widely is one of the best investments you can make.
+            </p>
+            <div class="blog-card__tags">
+              <span class="tag tag--secondary">Books</span>
+              <span class="tag">Learning</span>
+            </div>
+            <a href="#" class="blog-card__read-more">Read more</a>
+          </div>
+
+          <!-- Blog Post 7 -->
+          <div class="card blog-card">
+            <div class="card__meta">
+              <span class="blog-card__date">December 5, 2025</span>
+              <span>•</span>
+              <span>4 min read</span>
+            </div>
+            <h3 class="card__title">Finding Joy in Small Things</h3>
+            <p class="card__description">
+              In the pursuit of big goals and achievements, we often overlook the simple pleasures right in front of us. A reminder to appreciate the little moments.
+            </p>
+            <div class="blog-card__tags">
+              <span class="tag tag--primary">Mindfulness</span>
+              <span class="tag">Gratitude</span>
+            </div>
+            <a href="#" class="blog-card__read-more">Read more</a>
+          </div>
+
+          <!-- Blog Post 8 -->
+          <div class="card blog-card">
+            <div class="card__meta">
+              <span class="blog-card__date">November 28, 2025</span>
+              <span>•</span>
+              <span>8 min read</span>
+            </div>
+            <h3 class="card__title">My Creative Process</h3>
+            <p class="card__description">
+              A behind-the-scenes look at how I approach creative projects, from initial inspiration to final execution. Plus, how I deal with creative blocks and self-doubt.
+            </p>
+            <div class="blog-card__tags">
+              <span class="tag tag--accent">Creativity</span>
+              <span class="tag">Process</span>
+            </div>
+            <a href="#" class="blog-card__read-more">Read more</a>
+          </div>
+
+          <!-- Blog Post 9 -->
+          <div class="card blog-card">
+            <div class="card__meta">
+              <span class="blog-card__date">November 20, 2025</span>
+              <span>•</span>
+              <span>5 min read</span>
+            </div>
+            <h3 class="card__title">Why I Started This Blog</h3>
+            <p class="card__description">
+              The story behind this space and what I hope to achieve by sharing my thoughts publicly. Spoiler: it's as much for me as it is for anyone reading.
+            </p>
+            <div class="blog-card__tags">
+              <span class="tag tag--secondary">Blogging</span>
+              <span class="tag">Personal</span>
+            </div>
+            <a href="#" class="blog-card__read-more">Read more</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Newsletter Signup (placeholder) -->
+    <section class="section section--sm">
+      <div class="container container--narrow">
+        <div class="content-section text-center" style="background: linear-gradient(135deg, var(--primary-light), var(--secondary-light));">
+          <h2 style="margin-bottom: var(--spacing-md);">Stay Connected 💌</h2>
+          <p style="font-size: var(--font-lg); color: var(--text-secondary); margin-bottom: var(--spacing-lg);">
+            Want to get notified when I publish new posts? Join my newsletter for occasional updates and thoughts straight to your inbox.
+          </p>
+
+          <!-- Placeholder form -->
+          <div style="max-width: 500px; margin: 0 auto;">
+            <div style="display: flex; gap: var(--spacing-sm); flex-wrap: wrap; justify-content: center;">
+              <input
+                type="email"
+                placeholder="your@email.com"
+                style="flex: 1; min-width: 250px; padding: var(--spacing-sm) var(--spacing-md); border: 2px solid var(--gray); border-radius: var(--radius-md); font-size: var(--font-base);"
+                aria-label="Email address"
+              >
+              <button class="btn btn--primary">Subscribe</button>
+            </div>
+            <p style="font-size: var(--font-sm); color: var(--text-light); margin-top: var(--spacing-sm);">
+              No spam, unsubscribe anytime. Promise! 🤝
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="section section--sm">
+      <div class="container">
+        <div class="content-section">
+          <h2 class="text-center mb-xl">Explore by Topic 🏷️</h2>
+
+          <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-sm); justify-content: center; max-width: 800px; margin: 0 auto;">
+            <span class="tag tag--primary" style="font-size: var(--font-md); padding: var(--spacing-sm) var(--spacing-md);">Creativity (12)</span>
+            <span class="tag tag--secondary" style="font-size: var(--font-md); padding: var(--spacing-sm) var(--spacing-md);">Personal Growth (8)</span>
+            <span class="tag tag--accent" style="font-size: var(--font-md); padding: var(--spacing-sm) var(--spacing-md);">Productivity (6)</span>
+            <span class="tag" style="font-size: var(--font-md); padding: var(--spacing-sm) var(--spacing-md);">Learning (10)</span>
+            <span class="tag" style="font-size: var(--font-md); padding: var(--spacing-sm) var(--spacing-md);">Minimalism (4)</span>
+            <span class="tag" style="font-size: var(--font-md); padding: var(--spacing-sm) var(--spacing-md);">Technology (5)</span>
+            <span class="tag" style="font-size: var(--font-md); padding: var(--spacing-sm) var(--spacing-md);">Books (7)</span>
+            <span class="tag" style="font-size: var(--font-md); padding: var(--spacing-sm) var(--spacing-md);">Wellness (9)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__content">
+      <p class="footer__text">
+        Made with 💖 and lots of ☕
+      </p>
+      <div class="footer__links">
+        <a href="#" class="footer__link">GitHub</a>
+        <a href="#" class="footer__link">LinkedIn</a>
+        <a href="#" class="footer__link">Twitter</a>
+        <a href="#" class="footer__link">Email</a>
+      </div>
+      <p class="footer__text text-light mt-sm">
+        © 2026 MySite. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="js/main.js"></script>
+  <script src="js/components.js"></script>
+
+</body>
+</html>

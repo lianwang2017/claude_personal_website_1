@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn more about me, my journey, and what makes me tick">
+  <title>About | Personal Website</title>
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__brand">✨ MySite</a>
+
+      <div class="navbar__nav">
+        <a href="index.html" class="navbar__link">Home</a>
+        <a href="about.html" class="navbar__link">About</a>
+        <a href="hobbies.html" class="navbar__link">Hobbies</a>
+        <a href="blog.html" class="navbar__link">Blog</a>
+        <a href="projects.html" class="navbar__link">Projects</a>
+      </div>
+
+      <button class="navbar__toggle" aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="page-content">
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: linear-gradient(135deg, var(--primary-light), var(--accent-light)); min-height: 40vh;">
+      <div class="hero__content">
+        <h1 class="hero__title">About Me 👋</h1>
+        <p class="hero__subtitle">
+          Creative thinker • Problem solver • Lifelong learner
+        </p>
+      </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="section">
+      <div class="container">
+        <div class="about-content">
+
+          <!-- Profile Sidebar -->
+          <div class="about-profile">
+            <div class="about-profile__image" style="display: flex; align-items: center; justify-content: center; font-size: 6rem;">
+              😊
+            </div>
+            <h2 class="about-profile__name">Your Name</h2>
+            <p class="about-profile__title">Creative Professional</p>
+
+            <!-- Social Links -->
+            <div class="mt-md">
+              <div style="display: flex; gap: var(--spacing-sm); justify-content: center; flex-wrap: wrap;">
+                <a href="#" class="btn btn--sm btn--outline">GitHub</a>
+                <a href="#" class="btn btn--sm btn--outline">LinkedIn</a>
+                <a href="#" class="btn btn--sm btn--outline">Email</a>
+              </div>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="mt-lg" style="background: var(--light-gray); padding: var(--spacing-md); border-radius: var(--radius-md);">
+              <h3 style="font-size: var(--font-md); margin-bottom: var(--spacing-sm);">Quick Facts</h3>
+              <ul style="text-align: left; color: var(--text-secondary); font-size: var(--font-sm); line-height: 2;">
+                <li>☕ Coffee enthusiast</li>
+                <li>📚 Avid reader</li>
+                <li>🎨 Creative soul</li>
+                <li>🌱 Always learning</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Bio Content -->
+          <div class="about-bio">
+
+            <!-- Introduction -->
+            <div class="about-bio__section">
+              <h2 class="about-bio__heading">Hello! 👋</h2>
+              <p>
+                Welcome to my little corner of the internet! I'm so glad you're here. This space is where I get to share my journey, my work, and the things that light me up.
+              </p>
+              <p>
+                I believe in the power of creativity to transform ideas into reality. Whether it's through design, code, or simply approaching problems with a fresh perspective, I love finding innovative solutions that make a difference.
+              </p>
+            </div>
+
+            <!-- My Story -->
+            <div class="about-bio__section">
+              <h2 class="about-bio__heading">My Journey 🚀</h2>
+              <p>
+                My path has been anything but linear, and I wouldn't have it any other way. Each twist and turn has taught me something valuable and brought me to where I am today.
+              </p>
+              <p>
+                I started exploring [your field/interest] back in [year/timeframe], and I've been hooked ever since. What began as curiosity has grown into a genuine passion that drives everything I do.
+              </p>
+              <p>
+                Along the way, I've had the privilege of working on diverse projects, collaborating with amazing people, and continuously pushing myself to learn and grow. The journey continues, and I'm excited about what's ahead!
+              </p>
+            </div>
+
+            <!-- What I Do -->
+            <div class="about-bio__section">
+              <h2 class="about-bio__heading">What I Do 💼</h2>
+              <p>
+                I specialize in bringing ideas to life through a combination of creativity and technical skill. My work spans across several areas:
+              </p>
+              <ul style="margin-left: var(--spacing-lg); margin-bottom: var(--spacing-md); color: var(--text-secondary); line-height: var(--line-height-relaxed);">
+                <li><strong>Creative Design:</strong> Crafting beautiful, intuitive experiences that users love</li>
+                <li><strong>Development:</strong> Building robust, scalable solutions with clean code</li>
+                <li><strong>Problem Solving:</strong> Tackling complex challenges with innovative approaches</li>
+                <li><strong>Collaboration:</strong> Working with teams to achieve remarkable results</li>
+              </ul>
+            </div>
+
+            <!-- Skills -->
+            <div class="about-bio__section">
+              <h2 class="about-bio__heading">Skills & Expertise 🛠️</h2>
+              <p class="mb-md">
+                Here are some of the tools and technologies I work with:
+              </p>
+
+              <div class="skills-list">
+                <span class="tag tag--primary">JavaScript</span>
+                <span class="tag tag--secondary">HTML & CSS</span>
+                <span class="tag tag--accent">Design Systems</span>
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">UI/UX Design</span>
+                <span class="tag">Figma</span>
+                <span class="tag">Git</span>
+                <span class="tag tag--primary">Creative Thinking</span>
+                <span class="tag tag--secondary">Problem Solving</span>
+                <span class="tag tag--accent">Communication</span>
+                <span class="tag">Teamwork</span>
+              </div>
+            </div>
+
+            <!-- Values -->
+            <div class="about-bio__section">
+              <h2 class="about-bio__heading">What Drives Me 💫</h2>
+              <p>
+                Beyond the technical skills and experience, here's what really matters to me:
+              </p>
+              <div class="grid grid--2" style="margin-top: var(--spacing-md);">
+                <div style="background: var(--primary-light); padding: var(--spacing-md); border-radius: var(--radius-md);">
+                  <h4 style="margin-bottom: var(--spacing-xs);">✨ Creativity</h4>
+                  <p style="font-size: var(--font-sm);">Finding unique solutions and expressing ideas in beautiful ways</p>
+                </div>
+                <div style="background: var(--secondary-light); padding: var(--spacing-md); border-radius: var(--radius-md);">
+                  <h4 style="margin-bottom: var(--spacing-xs);">🌱 Growth</h4>
+                  <p style="font-size: var(--font-sm);">Constantly learning, evolving, and pushing beyond comfort zones</p>
+                </div>
+                <div style="background: var(--accent-light); padding: var(--spacing-md); border-radius: var(--radius-md);">
+                  <h4 style="margin-bottom: var(--spacing-xs);">🤝 Collaboration</h4>
+                  <p style="font-size: var(--font-sm);">Building meaningful connections and creating together</p>
+                </div>
+                <div style="background: var(--mint); padding: var(--spacing-md); border-radius: var(--radius-md);">
+                  <h4 style="margin-bottom: var(--spacing-xs);">💡 Impact</h4>
+                  <p style="font-size: var(--font-sm);">Making a positive difference through meaningful work</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fun Facts -->
+            <div class="about-bio__section">
+              <h2 class="about-bio__heading">Beyond Work 🎉</h2>
+              <p>
+                When I'm not working on projects, you can find me:
+              </p>
+              <ul style="margin-left: var(--spacing-lg); color: var(--text-secondary); line-height: var(--line-height-relaxed);">
+                <li>Exploring new coffee shops and trying different brews ☕</li>
+                <li>Getting lost in a good book or fascinating podcast 📚</li>
+                <li>Taking photos of everyday moments 📸</li>
+                <li>Learning something completely random and interesting 🌟</li>
+                <li>Spending time with loved ones and making memories ❤️</li>
+              </ul>
+              <p class="mt-md">
+                Want to know more about my hobbies? <a href="hobbies.html" style="font-weight: var(--font-semibold);">Check out my hobbies page!</a>
+              </p>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="about-bio__section text-center" style="background: linear-gradient(135deg, var(--primary-light), var(--secondary-light)); padding: var(--spacing-xl); border-radius: var(--radius-lg);">
+              <h2 style="margin-bottom: var(--spacing-md);">Let's Connect! 🌈</h2>
+              <p style="font-size: var(--font-lg); margin-bottom: var(--spacing-lg);">
+                I'd love to hear from you! Whether it's about a project, collaboration, or just to say hi.
+              </p>
+              <div style="display: flex; gap: var(--spacing-sm); justify-content: center; flex-wrap: wrap;">
+                <a href="projects.html" class="btn btn--primary">View My Projects</a>
+                <a href="blog.html" class="btn btn--secondary">Read My Blog</a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__content">
+      <p class="footer__text">
+        Made with 💖 and lots of ☕
+      </p>
+      <div class="footer__links">
+        <a href="#" class="footer__link">GitHub</a>
+        <a href="#" class="footer__link">LinkedIn</a>
+        <a href="#" class="footer__link">Twitter</a>
+        <a href="#" class="footer__link">Email</a>
+      </div>
+      <p class="footer__text text-light mt-sm">
+        © 2026 MySite. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="js/main.js"></script>
+  <script src="js/components.js"></script>
+
+</body>
+</html>

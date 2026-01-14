@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to my personal website - a creative space showcasing my projects, thoughts, and hobbies">
+  <title>Home | Personal Website</title>
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar__container">
+      <!-- Logo/Brand -->
+      <a href="index.html" class="navbar__brand">✨ MySite</a>
+
+      <!-- Navigation Links -->
+      <div class="navbar__nav">
+        <a href="index.html" class="navbar__link">Home</a>
+        <a href="about.html" class="navbar__link">About</a>
+        <a href="hobbies.html" class="navbar__link">Hobbies</a>
+        <a href="blog.html" class="navbar__link">Blog</a>
+        <a href="projects.html" class="navbar__link">Projects</a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="navbar__toggle" aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero home-hero">
+      <div class="hero__content">
+        <h1 class="hero__title">Welcome to My Creative Space ✨</h1>
+        <p class="hero__subtitle">
+          A playful corner of the internet where I share my projects, thoughts, and passions
+        </p>
+        <div class="hero__cta">
+          <a href="about.html" class="btn btn--primary btn--lg">Get to Know Me</a>
+          <a href="projects.html" class="btn btn--outline btn--lg">View My Work</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="section">
+      <div class="container">
+        <div class="content-section">
+          <h2 class="content-section__title">Featured Projects</h2>
+
+          <div class="grid grid--3">
+            <!-- Project Card 1 -->
+            <div class="card project-card">
+              <div class="card__image" style="background: linear-gradient(135deg, #FFD9EC, #D9F3FF); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                🎨
+              </div>
+              <h3 class="card__title">Creative Design System</h3>
+              <p class="card__description">
+                A comprehensive design system built with love and attention to detail. Features beautiful components and smooth interactions.
+              </p>
+              <div class="card__footer">
+                <a href="projects.html" class="btn btn--sm btn--primary">Learn More</a>
+              </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="card project-card">
+              <div class="card__image" style="background: linear-gradient(135deg, #D9F3FF, #EAD9FF); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                💻
+              </div>
+              <h3 class="card__title">Tech Innovation</h3>
+              <p class="card__description">
+                An innovative solution that combines creativity with technology. Built to solve real-world problems with elegance.
+              </p>
+              <div class="card__footer">
+                <a href="projects.html" class="btn btn--sm btn--primary">Learn More</a>
+              </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="card project-card">
+              <div class="card__image" style="background: linear-gradient(135deg, #B5FFD9, #FFD9B5); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                🚀
+              </div>
+              <h3 class="card__title">Passion Project</h3>
+              <p class="card__description">
+                A labor of love that brings together everything I'm passionate about. Still evolving and growing every day!
+              </p>
+              <div class="card__footer">
+                <a href="projects.html" class="btn btn--sm btn--primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Blog Posts Section -->
+    <section class="section section--sm">
+      <div class="container">
+        <div class="content-section content-section--alt">
+          <h2 class="content-section__title">Latest Thoughts</h2>
+
+          <div class="grid grid--2">
+            <!-- Blog Card 1 -->
+            <div class="card blog-card">
+              <div class="card__meta">
+                <span class="blog-card__date">January 10, 2026</span>
+              </div>
+              <h3 class="card__title">Reflections on Creativity</h3>
+              <p class="card__description">
+                Exploring what it means to be creative in the modern world. Some thoughts on finding inspiration in unexpected places and making time for the things that matter.
+              </p>
+              <div class="blog-card__tags">
+                <span class="tag tag--primary">Creativity</span>
+                <span class="tag tag--secondary">Life</span>
+              </div>
+              <a href="blog.html" class="blog-card__read-more">Read more</a>
+            </div>
+
+            <!-- Blog Card 2 -->
+            <div class="card blog-card">
+              <div class="card__meta">
+                <span class="blog-card__date">January 5, 2026</span>
+              </div>
+              <h3 class="card__title">Learning in Public</h3>
+              <p class="card__description">
+                Why I decided to start sharing my journey online. The power of vulnerability and the surprising connections that come from being authentic.
+              </p>
+              <div class="blog-card__tags">
+                <span class="tag tag--accent">Personal Growth</span>
+                <span class="tag">Learning</span>
+              </div>
+              <a href="blog.html" class="blog-card__read-more">Read more</a>
+            </div>
+          </div>
+
+          <div class="text-center mt-xl">
+            <a href="blog.html" class="btn btn--secondary">View All Posts</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section class="section">
+      <div class="container container--narrow">
+        <div class="featured-section text-center">
+          <h2 class="mb-md">👋 Nice to meet you!</h2>
+          <p class="text-secondary" style="font-size: var(--font-lg); line-height: var(--line-height-relaxed);">
+            I'm a creative soul who loves bringing ideas to life through design and code.
+            When I'm not working on exciting projects, you can find me exploring new hobbies,
+            sipping coffee, and finding joy in the little things.
+          </p>
+          <div class="mt-lg">
+            <a href="about.html" class="btn btn--primary">More About Me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__content">
+      <p class="footer__text">
+        Made with 💖 and lots of ☕
+      </p>
+      <div class="footer__links">
+        <a href="#" class="footer__link">GitHub</a>
+        <a href="#" class="footer__link">LinkedIn</a>
+        <a href="#" class="footer__link">Twitter</a>
+        <a href="#" class="footer__link">Email</a>
+      </div>
+      <p class="footer__text text-light mt-sm">
+        © 2026 MySite. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="js/main.js"></script>
+  <script src="js/components.js"></script>
+
+</body>
+</html>
