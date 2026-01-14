@@ -5,54 +5,57 @@
  * This file provides the foundation for the entire website's design system.
  */
 
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
 /* ==================
    CSS Custom Properties (Design Tokens)
    ================== */
 
 :root {
   /*
-   * Color Palette - Pastel Theme
-   * Soft, playful colors for a modern, friendly feel
+   * Color Palette - Warm & Professional
+   * Sophisticated, warm tones that balance friendly and professional
    */
 
-  /* Primary Colors */
-  --primary: #FFB3D9;           /* Soft pink - main brand color */
-  --primary-light: #FFD9EC;     /* Lighter pink - hover states */
-  --primary-dark: #FF8DC7;      /* Darker pink - active states */
+  /* Primary Colors - Terracotta/Burnt Orange */
+  --primary: #C7704A;           /* Terracotta - main brand color */
+  --primary-light: #E09977;     /* Lighter terracotta - hover states */
+  --primary-dark: #A65A3A;      /* Darker terracotta - active states */
 
-  /* Secondary Colors */
-  --secondary: #B5E8FF;         /* Sky blue - calm, professional */
-  --secondary-light: #D9F3FF;   /* Lighter blue */
-  --secondary-dark: #8CDCFF;    /* Darker blue */
+  /* Secondary Colors - Deep Teal */
+  --secondary: #2D6A6A;         /* Teal - professional, calm */
+  --secondary-light: #4A8A8A;   /* Lighter teal */
+  --secondary-dark: #1F4D4D;    /* Darker teal */
 
   /* Accent Colors */
-  --accent: #D4B5FF;            /* Lavender - creative touch */
-  --accent-light: #EAD9FF;      /* Lighter lavender */
-  --mint: #B5FFD9;              /* Mint green - fresh, energetic */
-  --peach: #FFD9B5;             /* Peach - warm, inviting */
+  --accent: #D4A04A;            /* Warm gold/ochre - creative touch */
+  --accent-light: #E6BA6F;      /* Lighter gold */
+  --mint: #5A9E7A;              /* Muted sage green - fresh */
+  --peach: #E8B89A;             /* Soft peach - warm, inviting */
 
-  /* Neutral Colors */
+  /* Neutral Colors - Warmer palette */
   --white: #FFFFFF;
-  --off-white: #FAFAFA;
-  --light-gray: #F0F0F0;
-  --gray: #E0E0E0;
-  --dark-gray: #666666;
-  --text-primary: #333333;
-  --text-secondary: #666666;
-  --text-light: #999999;
+  --off-white: #FAF7F5;         /* Warm off-white with cream undertone */
+  --light-gray: #EDE8E3;        /* Warm light gray */
+  --gray: #D4CEC7;              /* Warm gray */
+  --dark-gray: #5A5550;         /* Warm dark gray */
+  --text-primary: #2B2825;      /* Warm near-black */
+  --text-secondary: #5A5550;    /* Warm medium gray */
+  --text-light: #8A847D;        /* Warm light gray */
 
   /* Semantic Colors */
-  --success: #B5FFD9;
-  --warning: #FFD9B5;
-  --error: #FFB3B3;
-  --info: #B5E8FF;
+  --success: #5A9E7A;
+  --warning: #D4A04A;
+  --error: #C75C4A;
+  --info: #4A8A8A;
 
   /*
    * Typography
-   * Using system fonts for performance and readability
+   * Professional serif headings with clean sans-serif body
    */
-  --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  --font-heading: 'Georgia', 'Times New Roman', serif;
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  --font-heading: 'Crimson Pro', 'Georgia', 'Times New Roman', serif;
   --font-mono: 'Monaco', 'Courier New', monospace;
 
   /* Font Sizes - Modular Scale (1.250 - Major Third) */
@@ -100,12 +103,12 @@
   --header-height: 70px;
 
   /*
-   * Border Radius - Rounded, playful feel
+   * Border Radius - Subtle, professional feel
    */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
   --radius-full: 9999px;
 
   /*
