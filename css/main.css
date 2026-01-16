@@ -14,41 +14,41 @@
 
 :root {
   /*
-   * Color Palette - Warm & Professional
-   * Sophisticated, warm tones that balance friendly and professional
+   * Color Palette - Pastel & Cute
+   * Light, playful pastel colors with a warm, friendly feel
    */
 
-  /* Primary Colors - Terracotta/Burnt Orange */
-  --primary: #C7704A;           /* Terracotta - main brand color */
-  --primary-light: #E09977;     /* Lighter terracotta - hover states */
-  --primary-dark: #A65A3A;      /* Darker terracotta - active states */
+  /* Primary Colors - Soft Coral Pink */
+  --primary: #FFB5C2;           /* Soft coral pink - main brand color */
+  --primary-light: #FFD6E0;     /* Lighter pink - hover states */
+  --primary-dark: #FF94A8;      /* Darker pink - active states */
 
-  /* Secondary Colors - Deep Teal */
-  --secondary: #2D6A6A;         /* Teal - professional, calm */
-  --secondary-light: #4A8A8A;   /* Lighter teal */
-  --secondary-dark: #1F4D4D;    /* Darker teal */
+  /* Secondary Colors - Soft Lavender */
+  --secondary: #D4C5F9;         /* Soft lavender - calm, dreamy */
+  --secondary-light: #E8E0FC;   /* Lighter lavender */
+  --secondary-dark: #C0ADEF;    /* Darker lavender */
 
   /* Accent Colors */
-  --accent: #D4A04A;            /* Warm gold/ochre - creative touch */
-  --accent-light: #E6BA6F;      /* Lighter gold */
-  --mint: #5A9E7A;              /* Muted sage green - fresh */
-  --peach: #E8B89A;             /* Soft peach - warm, inviting */
+  --accent: #FFF4A3;            /* Soft yellow - cheerful, sunny */
+  --accent-light: #FFFBCC;      /* Lighter yellow */
+  --mint: #B5EAD7;              /* Mint green - fresh, peaceful */
+  --peach: #FFCBA4;             /* Peachy orange - warm, cute */
 
-  /* Neutral Colors - Warmer palette */
+  /* Neutral Colors - Light and airy */
   --white: #FFFFFF;
-  --off-white: #FAF7F5;         /* Warm off-white with cream undertone */
-  --light-gray: #EDE8E3;        /* Warm light gray */
-  --gray: #D4CEC7;              /* Warm gray */
-  --dark-gray: #5A5550;         /* Warm dark gray */
-  --text-primary: #2B2825;      /* Warm near-black */
-  --text-secondary: #5A5550;    /* Warm medium gray */
-  --text-light: #8A847D;        /* Warm light gray */
+  --off-white: #FFFEF9;         /* Very light cream */
+  --light-gray: #F7F4F9;        /* Soft lavender-tinted white */
+  --gray: #E8E3ED;              /* Light lavender gray */
+  --dark-gray: #9B8FAA;         /* Soft purple-gray */
+  --text-primary: #4A4458;      /* Soft dark purple */
+  --text-secondary: #7A6E8C;    /* Medium purple-gray */
+  --text-light: #B5ABC0;        /* Light purple-gray */
 
   /* Semantic Colors */
-  --success: #5A9E7A;
-  --warning: #D4A04A;
-  --error: #C75C4A;
-  --info: #4A8A8A;
+  --success: #B5EAD7;
+  --warning: #FFCBA4;
+  --error: #FFB5C2;
+  --info: #D4C5F9;
 
   /*
    * Typography
