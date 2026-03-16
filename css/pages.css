@@ -474,7 +474,7 @@
   top: 0;
   bottom: 0;
   width: 3px;
-  background: linear-gradient(to bottom, var(--mint), var(--primary), var(--secondary), var(--accent), var(--peach));
+  background: linear-gradient(to bottom, var(--peach), var(--accent), var(--secondary), var(--primary), var(--mint));
   border-radius: var(--radius-full);
 }
 
