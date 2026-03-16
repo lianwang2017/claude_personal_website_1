@@ -12,7 +12,7 @@
 
   let current = 0;
   const total = images.length;
-  const INTERVAL = 4000; // 4 seconds per slide
+  const INTERVAL = 5000; // 5 seconds per slide
 
   function next() {
     // Remove active class from current

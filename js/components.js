@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', initTagInteractions);
  * Shows loading state and handles errors
  */
 function initImageHandling() {
-  const images = document.querySelectorAll('img');
+  const images = document.querySelectorAll('img:not(.carousel__image):not(.about-profile__image)');
 
   images.forEach(img => {
     // Add loading class
