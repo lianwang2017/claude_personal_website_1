@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Coder, tennis player, reader, student — exploring the world through multiple lenses">
+  <meta name="description" content="Jane Wang — engineer, MBA candidate, and lifelong explorer. Welcome to my corner of the internet.">
   <title>Home | Jane Wang</title>
 
   <!-- CSS Files -->
@@ -19,10 +19,8 @@
   <!-- Navigation -->
   <nav class="navbar">
     <div class="navbar__container">
-      <!-- Logo/Brand -->
-      <a href="index.html" class="navbar__brand">Jane Wang ✨</a>
+      <a href="index.html" class="navbar__brand">Jane Wang</a>
 
-      <!-- Navigation Links -->
       <div class="navbar__nav">
         <a href="index.html" class="navbar__link">Home</a>
         <a href="about.html" class="navbar__link">About</a>
@@ -31,7 +29,6 @@
         <a href="projects.html" class="navbar__link">Projects</a>
       </div>
 
-      <!-- Mobile Menu Toggle -->
       <button class="navbar__toggle" aria-label="Toggle navigation" aria-expanded="false">
         ☰
       </button>
@@ -40,18 +37,38 @@
 
   <!-- Main Content -->
   <main>
-    <!-- Hero Section -->
+    <!-- Hero Section with Carousel -->
     <section class="hero home-hero" style="min-height: 85vh; background: linear-gradient(135deg, var(--off-white) 0%, var(--light-gray) 100%);">
       <div class="hero__content" style="max-width: 900px;">
         <p style="font-size: var(--font-lg); color: var(--primary); font-weight: var(--font-medium); margin-bottom: var(--spacing-sm);">
-          Hi, I'm Jane Wang ✨
+          Hi, I'm Jane Wang
         </p>
-        <h1 class="hero__title" style="font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: var(--spacing-lg); line-height: 1.1;">
-          Coder. Tennis Player.<br/>Reader. Student. 💫
-        </h1>
+
+        <!-- Carousel Container -->
+        <div class="carousel" aria-label="Identity carousel">
+          <div class="carousel__image-wrapper">
+            <img src="images/professional_jane.png" alt="Jane Wang - Professional" class="carousel__image carousel__image--active" />
+            <img src="images/coding_jane.png" alt="Jane Wang - Coding" class="carousel__image" />
+            <img src="images/tennis_jane.png" alt="Jane Wang - Playing Tennis" class="carousel__image" />
+            <img src="images/cooking_jane.png" alt="Jane Wang - Cooking" class="carousel__image" />
+            <img src="images/pottery_jane.png" alt="Jane Wang - Pottery" class="carousel__image" />
+            <img src="images/travel_jane.png" alt="Jane Wang - Traveling" class="carousel__image" />
+            <img src="images/paragliding_jane.png" alt="Jane Wang - Paragliding" class="carousel__image" />
+          </div>
+
+          <h1 class="hero__title carousel__title" style="font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: var(--spacing-lg); line-height: 1.1;">
+            <span class="carousel__text carousel__text--active">Engineer. MBA. Explorer.</span>
+            <span class="carousel__text">Building things with code.</span>
+            <span class="carousel__text">Chasing every ball on the court.</span>
+            <span class="carousel__text">Experimenting in the kitchen.</span>
+            <span class="carousel__text">Getting my hands dirty with clay.</span>
+            <span class="carousel__text">Discovering the world, one trip at a time.</span>
+            <span class="carousel__text">Always chasing the next adventure.</span>
+          </h1>
+        </div>
+
         <p class="hero__subtitle" style="font-size: var(--font-xl); max-width: 600px; margin: 0 auto var(--spacing-xl); color: var(--text-secondary);">
-          I write code that solves problems, hit tennis balls on weekends, get lost in books,
-          and never stop learning. Welcome to my cozy corner of the internet! 🌸
+          From writing code at Google to pursuing my MBA at Wharton, I'm driven by curiosity and a love for building things that matter. Welcome to my corner of the internet.
         </p>
         <div class="hero__cta" style="display: flex; gap: var(--spacing-md); justify-content: center; flex-wrap: wrap;">
           <a href="projects.html" class="btn btn--primary btn--lg">View My Work</a>
@@ -60,214 +77,41 @@
       </div>
     </section>
 
-    <!-- Identity Grid Section -->
+    <!-- What Defines Me — Brief Summary -->
     <section class="section" style="background-color: var(--white);">
       <div class="container">
         <h2 class="text-center mb-xl" style="font-size: var(--font-3xl);">What Defines Me</h2>
-
-        <div class="grid grid--2" style="gap: var(--spacing-xl);">
-
-          <!-- Coder Card -->
-          <div class="card" style="border-left: 4px solid var(--primary); background: linear-gradient(135deg, var(--white) 0%, var(--off-white) 100%);">
-            <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">💻</div>
-            <h3 class="card__title">Coder</h3>
-            <p class="card__description">
-              I build things with code. From web applications to automation scripts, I love solving
-              problems through elegant solutions. My tools of choice include JavaScript, Python, and
-              whatever gets the job done best.
-            </p>
-            <div style="display: flex; gap: var(--spacing-xs); flex-wrap: wrap; margin-top: var(--spacing-md);">
-              <span class="tag">JavaScript</span>
-              <span class="tag">Python</span>
-              <span class="tag">React</span>
-              <span class="tag">Node.js</span>
-            </div>
-            <div class="mt-md">
-              <a href="projects.html" style="color: var(--primary); font-weight: var(--font-semibold);">
-                See my projects →
-              </a>
-            </div>
-          </div>
-
-          <!-- Tennis Player Card -->
-          <div class="card" style="border-left: 4px solid var(--secondary); background: linear-gradient(135deg, var(--white) 0%, var(--off-white) 100%);">
-            <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">🎾</div>
-            <h3 class="card__title">Tennis Player</h3>
-            <p class="card__description">
-              Tennis teaches me discipline, strategy, and resilience. Whether it's perfecting my serve
-              or analyzing match tactics, the court is where I clear my mind and challenge myself
-              physically and mentally.
-            </p>
-            <div style="display: flex; gap: var(--spacing-xs); flex-wrap: wrap; margin-top: var(--spacing-md);">
-              <span class="tag tag--secondary">Competitive</span>
-              <span class="tag tag--secondary">Strategic</span>
-              <span class="tag tag--secondary">Athletic</span>
-            </div>
-            <div class="mt-md">
-              <a href="hobbies.html" style="color: var(--secondary); font-weight: var(--font-semibold);">
-                More about my hobbies →
-              </a>
-            </div>
-          </div>
-
-          <!-- Reader Card -->
-          <div class="card" style="border-left: 4px solid var(--accent); background: linear-gradient(135deg, var(--white) 0%, var(--off-white) 100%);">
-            <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">📚</div>
-            <h3 class="card__title">Reader</h3>
-            <p class="card__description">
-              Books are my gateway to different worlds, perspectives, and ideas. From technical
-              documentation to classic literature, from philosophy to sci-fi—if it's interesting,
-              I'm reading it. Currently working through my 2026 reading challenge.
-            </p>
-            <div style="display: flex; gap: var(--spacing-xs); flex-wrap: wrap; margin-top: var(--spacing-md);">
-              <span class="tag tag--accent">Fiction</span>
-              <span class="tag tag--accent">Non-Fiction</span>
-              <span class="tag tag--accent">Tech Books</span>
-            </div>
-            <div class="mt-md">
-              <a href="blog.html" style="color: var(--accent); font-weight: var(--font-semibold);">
-                Read my thoughts →
-              </a>
-            </div>
-          </div>
-
-          <!-- Student Card -->
-          <div class="card" style="border-left: 4px solid var(--mint); background: linear-gradient(135deg, var(--white) 0%, var(--off-white) 100%);">
-            <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">🎓</div>
-            <h3 class="card__title">Perpetual Student</h3>
-            <p class="card__description">
-              Learning never stops. Whether it's a new programming language, a tennis technique,
-              or insights from a book, I'm always curious and always growing. Education isn't just
-              formal—it's a mindset.
-            </p>
-            <div style="display: flex; gap: var(--spacing-xs); flex-wrap: wrap; margin-top: var(--spacing-md);">
-              <span class="tag">Curious</span>
-              <span class="tag">Growth-Minded</span>
-              <span class="tag">Adaptable</span>
-            </div>
-            <div class="mt-md">
-              <a href="about.html" style="color: var(--mint); font-weight: var(--font-semibold);">
-                Learn more about me →
-              </a>
-            </div>
-          </div>
-
+        <p class="text-center" style="max-width: 700px; margin: 0 auto var(--spacing-xl); font-size: var(--font-lg); color: var(--text-secondary); line-height: var(--line-height-relaxed);">
+          I'm a software engineer turned MBA candidate who loves tennis, pottery, cooking, traveling, and getting lost in a good book. Life's too short to only do one thing well.
+        </p>
+        <div class="text-center">
+          <a href="hobbies.html" class="btn btn--outline">Explore My Hobbies</a>
         </div>
       </div>
     </section>
 
-    <!-- Recent Work Section -->
+    <!-- Recent Work — Brief Summary -->
     <section class="section" style="background-color: var(--off-white);">
       <div class="container">
-        <div style="text-align: center; margin-bottom: var(--spacing-xl);">
-          <h2 style="font-size: var(--font-3xl); margin-bottom: var(--spacing-sm);">Recent Work</h2>
-          <p style="font-size: var(--font-lg); color: var(--text-secondary);">
-            A selection of projects I've been working on
-          </p>
-        </div>
-
-        <div class="grid grid--3">
-          <!-- Project 1 -->
-          <div class="card project-card">
-            <div style="background: linear-gradient(135deg, var(--primary-light), var(--accent-light)); height: 180px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; font-size: 3rem; margin-bottom: var(--spacing-md);">
-              🌐
-            </div>
-            <h3 class="card__title">Web Application</h3>
-            <p class="card__description">
-              A full-stack web application built with modern technologies. Features real-time updates,
-              user authentication, and a clean, responsive interface.
-            </p>
-            <div class="card__footer">
-              <a href="projects.html" class="btn btn--sm btn--primary">Learn More</a>
-            </div>
-          </div>
-
-          <!-- Project 2 -->
-          <div class="card project-card">
-            <div style="background: linear-gradient(135deg, var(--secondary-light), var(--mint)); height: 180px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; font-size: 3rem; margin-bottom: var(--spacing-md);">
-              ⚡
-            </div>
-            <h3 class="card__title">Automation Tool</h3>
-            <p class="card__description">
-              Python script that automates repetitive tasks, saving hours of manual work. Clean code,
-              well-documented, and easy to extend.
-            </p>
-            <div class="card__footer">
-              <a href="projects.html" class="btn btn--sm btn--primary">Learn More</a>
-            </div>
-          </div>
-
-          <!-- Project 3 -->
-          <div class="card project-card">
-            <div style="background: linear-gradient(135deg, var(--accent-light), var(--peach)); height: 180px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; font-size: 3rem; margin-bottom: var(--spacing-md);">
-              📊
-            </div>
-            <h3 class="card__title">Data Analysis</h3>
-            <p class="card__description">
-              Analyzing patterns and extracting insights from data. Visualizations that tell stories
-              and help make informed decisions.
-            </p>
-            <div class="card__footer">
-              <a href="projects.html" class="btn btn--sm btn--primary">Learn More</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center mt-xl">
-          <a href="projects.html" class="btn btn--outline">View All Projects</a>
+        <h2 class="text-center mb-xl" style="font-size: var(--font-3xl);">Recent Work</h2>
+        <p class="text-center" style="max-width: 700px; margin: 0 auto var(--spacing-xl); font-size: var(--font-lg); color: var(--text-secondary); line-height: var(--line-height-relaxed);">
+          From color palette generators to habit trackers, I love building small tools that solve real problems. Check out some of the projects I've been tinkering with.
+        </p>
+        <div class="text-center">
+          <a href="projects.html" class="btn btn--outline">View My Projects</a>
         </div>
       </div>
     </section>
 
-    <!-- Recent Writing Section -->
+    <!-- Latest Writing — Brief Summary -->
     <section class="section" style="background-color: var(--white);">
       <div class="container">
-        <div style="text-align: center; margin-bottom: var(--spacing-xl);">
-          <h2 style="font-size: var(--font-3xl); margin-bottom: var(--spacing-sm);">Latest Writing</h2>
-          <p style="font-size: var(--font-lg); color: var(--text-secondary);">
-            Thoughts on code, learning, and life
-          </p>
-        </div>
-
-        <div class="grid grid--2">
-          <!-- Blog Post 1 -->
-          <div class="card blog-card">
-            <div class="card__meta">
-              <span class="blog-card__date">January 10, 2026</span>
-            </div>
-            <h3 class="card__title">Reflections on Creativity in Code</h3>
-            <p class="card__description">
-              Programming is often seen as purely logical, but there's an incredible amount of creativity
-              involved in crafting elegant solutions. Here's what I've learned about balancing structure
-              with innovation.
-            </p>
-            <div class="blog-card__tags">
-              <span class="tag tag--primary">Coding</span>
-              <span class="tag">Creativity</span>
-            </div>
-            <a href="blog.html" class="blog-card__read-more">Read more</a>
-          </div>
-
-          <!-- Blog Post 2 -->
-          <div class="card blog-card">
-            <div class="card__meta">
-              <span class="blog-card__date">January 5, 2026</span>
-            </div>
-            <h3 class="card__title">Learning in Public</h3>
-            <p class="card__description">
-              Sharing your learning journey can feel vulnerable, but it's one of the most effective ways
-              to grow. Here's why I decided to start documenting what I learn and build.
-            </p>
-            <div class="blog-card__tags">
-              <span class="tag tag--accent">Learning</span>
-              <span class="tag">Personal Growth</span>
-            </div>
-            <a href="blog.html" class="blog-card__read-more">Read more</a>
-          </div>
-        </div>
-
-        <div class="text-center mt-xl">
-          <a href="blog.html" class="btn btn--outline">View All Posts</a>
+        <h2 class="text-center mb-xl" style="font-size: var(--font-3xl);">Latest Writing</h2>
+        <p class="text-center" style="max-width: 700px; margin: 0 auto var(--spacing-xl); font-size: var(--font-lg); color: var(--text-secondary); line-height: var(--line-height-relaxed);">
+          Thoughts on code, learning, career pivots, and finding balance in a busy world. I write about what I'm learning and the questions that keep me up at night.
+        </p>
+        <div class="text-center">
+          <a href="blog.html" class="btn btn--outline">Read My Blog</a>
         </div>
       </div>
     </section>
@@ -278,16 +122,14 @@
   <footer class="footer">
     <div class="footer__content">
       <p class="footer__text">
-        Made with 💖 and lots of ☕
+        Made with care by Jane Wang
       </p>
       <div class="footer__links">
-        <a href="#" class="footer__link">GitHub</a>
-        <a href="#" class="footer__link">LinkedIn</a>
-        <a href="#" class="footer__link">Twitter</a>
-        <a href="#" class="footer__link">Email</a>
+        <a href="https://linkedin.com/in/janelianwang/" class="footer__link">LinkedIn</a>
+        <a href="mailto:jane2027@wharton.upenn.edu" class="footer__link">Email</a>
       </div>
       <p class="footer__text text-light mt-sm">
-        © 2026 Jane Wang. All rights reserved.
+        &copy; 2026 Jane Wang. All rights reserved.
       </p>
     </div>
   </footer>
@@ -295,6 +137,7 @@
   <!-- JavaScript Files -->
   <script src="js/main.js"></script>
   <script src="js/components.js"></script>
+  <script src="js/carousel.js"></script>
 
 </body>
 </html>
