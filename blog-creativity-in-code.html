@@ -3,222 +3,169 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Programming is often seen as purely logical, but there's an incredible amount of creativity involved">
-  <title>Reflections on Creativity in Code | Blog</title>
+  <meta name="description" content="Reflections on creativity in code — why programming is as much art as logic, by Jane Wang.">
+  <title>Reflections on Creativity in Code — Jane Wang</title>
 
-  <!-- CSS Files -->
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages.css">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✿</text></svg>">
 </head>
-<body>
+<body class="theme-lemon">
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="navbar__container">
-      <a href="index.html" class="navbar__brand">Jane Wang</a>
+  <!-- ===================== NAV ===================== -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__brand">jane <em>wang</em></a>
 
-      <div class="navbar__nav">
-        <a href="index.html" class="navbar__link">Home</a>
-        <a href="about.html" class="navbar__link">About</a>
-        <a href="hobbies.html" class="navbar__link">Hobbies</a>
-        <a href="blog.html" class="navbar__link">Blog</a>
-        <a href="projects.html" class="navbar__link">Projects</a>
+      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+      <div class="nav__links">
+        <a href="about.html" class="nav__link">About</a>
+        <a href="hobbies.html" class="nav__link">Hobbies</a>
+        <a href="projects.html" class="nav__link">Projects</a>
+        <a href="blog.html" class="nav__link">Blog</a>
+        <a href="mailto:jane2027@wharton.upenn.edu" class="btn btn--fill btn--sm nav__cta">Say hi ✿</a>
       </div>
-
-      <button class="navbar__toggle" aria-label="Toggle navigation" aria-expanded="false">
-        ☰
-      </button>
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <main class="page-content">
-
-    <!-- Back Button -->
-    <section class="section section--sm">
-      <div class="container container--narrow">
-        <a href="blog.html" style="display: inline-flex; align-items: center; gap: var(--spacing-xs); color: var(--text-secondary); font-weight: var(--font-medium); margin-bottom: var(--spacing-lg);">
-          ← Back to Blog
-        </a>
-      </div>
-    </section>
-
-    <!-- Article Header -->
+  <main>
     <article>
-      <header class="section section--sm" style="padding-top: 0;">
+
+      <!-- ===================== ARTICLE HEAD ===================== -->
+      <header class="article-head">
         <div class="container container--narrow">
-          <div class="blog-card__tags mb-md">
-            <span class="tag tag--primary">Coding</span>
-            <span class="tag">Creativity</span>
-          </div>
+          <a href="blog.html" class="article-back">← back to field notes</a>
 
-          <h1 style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: var(--spacing-md); line-height: 1.2;">
-            Reflections on Creativity in Code
-          </h1>
+          <h1 class="article-head__title">Reflections on <em class="display-italic" style="color: var(--accent);">Creativity</em> in Code</h1>
 
-          <div class="card__meta" style="font-size: var(--font-md); margin-bottom: var(--spacing-xl);">
-            <span class="blog-card__date">January 10, 2026</span>
-            <span>•</span>
+          <div class="card__meta" style="margin-bottom: var(--space-4);">
+            <span>Jan 10, 2026</span>
+            <span>·</span>
             <span>5 min read</span>
-            <span>•</span>
-            <span>By Jane Wang</span>
+            <span>·</span>
+            <span>by Jane Wang</span>
           </div>
 
-          <div style="height: 300px; background: linear-gradient(135deg, var(--primary-light), var(--accent-light)); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; font-size: 6rem; margin-bottom: var(--spacing-xl);">
+          <div class="article-banner" style="background: linear-gradient(135deg, var(--accent-faint), var(--accent-faint));">
             🎨
           </div>
         </div>
       </header>
 
-      <!-- Article Body -->
-      <div class="section" style="padding-top: 0;">
-        <div class="container container--narrow">
-          <div style="font-size: var(--font-lg); line-height: var(--line-height-relaxed); color: var(--text-primary);">
+      <!-- ===================== ARTICLE BODY ===================== -->
+      <div class="container container--narrow article-body" style="padding-bottom: var(--space-5);">
 
-            <p style="font-size: var(--font-xl); font-weight: var(--font-medium); color: var(--text-primary); margin-bottom: var(--spacing-lg);">
-              Programming is often portrayed as a purely logical discipline—a series of algorithms, syntax rules, and problem-solving exercises. But anyone who's spent time writing code knows there's something more at play: creativity.
-            </p>
+        <p style="font-size: var(--text-xl); color: var(--ink); font-weight: 500;">
+          Programming is often portrayed as a purely logical discipline—a series of algorithms, syntax rules, and problem-solving exercises. But anyone who's spent time writing code knows there's something more at play: creativity.
+        </p>
 
-            <p>
-              When I first started coding, I thought creativity was reserved for designers and artists. Code was about making things work, following best practices, and solving well-defined problems. But the more I wrote, the more I realized that some of the most satisfying moments in programming came from those creative leaps—finding an elegant solution where a clunky one existed, refactoring code into something beautiful, or architecting a system that just <em>feels right</em>.
-            </p>
+        <p>
+          When I first started coding, I thought creativity was reserved for designers and artists. Code was about making things work, following best practices, and solving well-defined problems. But the more I wrote, the more I realized that some of the most satisfying moments in programming came from those creative leaps—finding an elegant solution where a clunky one existed, refactoring code into something beautiful, or architecting a system that just <em>feels right</em>.
+        </p>
 
-            <h2 style="margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">The Art of the Elegant Solution</h2>
+        <h2>The Art of the Elegant Solution</h2>
 
-            <p>
-              There's a difference between code that works and code that sings. The former gets the job done; the latter does it with style. I've learned that elegance in code isn't about being clever for the sake of it—it's about clarity, simplicity, and intention.
-            </p>
+        <p>
+          There's a difference between code that works and code that sings. The former gets the job done; the latter does it with style. I've learned that elegance in code isn't about being clever for the sake of it—it's about clarity, simplicity, and intention.
+        </p>
 
-            <p>
-              Consider a function that processes data. You could write it as a nested maze of if-statements and loops, or you could step back, think creatively about the problem, and write something clean and readable. Both might produce the same output, but one invites future developers (including yourself) to understand and extend it, while the other begs for a rewrite.
-            </p>
+        <p>
+          Consider a function that processes data. You could write it as a nested maze of if-statements and loops, or you could step back, think creatively about the problem, and write something clean and readable. Both might produce the same output, but one invites future developers (including yourself) to understand and extend it, while the other begs for a rewrite.
+        </p>
 
-            <blockquote style="border-left: 4px solid var(--primary); padding-left: var(--spacing-lg); margin: var(--spacing-xl) 0; font-style: italic; color: var(--text-secondary); font-size: var(--font-lg);">
-              "Programs must be written for people to read, and only incidentally for machines to execute."
-              <br/>
-              <span style="font-size: var(--font-base); font-style: normal;">— Harold Abelson</span>
-            </blockquote>
+        <blockquote>
+          "Programs must be written for people to read, and only incidentally for machines to execute." — Harold Abelson
+        </blockquote>
 
-            <h2 style="margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">Constraints Breed Creativity</h2>
+        <h2>Constraints Breed Creativity</h2>
 
-            <p>
-              One of the most interesting parallels between coding and traditional creative fields is the role of constraints. Just as a poet must work within meter and rhyme, a programmer must work within the bounds of performance, memory, and maintainability.
-            </p>
+        <p>
+          One of the most interesting parallels between coding and traditional creative fields is the role of constraints. Just as a poet must work within meter and rhyme, a programmer must work within the bounds of performance, memory, and maintainability.
+        </p>
 
-            <p>
-              These constraints don't stifle creativity—they channel it. When you can't brute-force a solution because it's too slow, you're forced to think differently. When you can't add another dependency because of bundle size, you get creative with what you have. Some of my best code has come from these moments of constraint.
-            </p>
+        <p>
+          These constraints don't stifle creativity—they channel it. When you can't brute-force a solution because it's too slow, you're forced to think differently. When you can't add another dependency because of bundle size, you get creative with what you have. Some of my best code has come from these moments of constraint.
+        </p>
 
-            <h2 style="margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">Naming Things: The Unsung Creative Act</h2>
+        <h2>Naming Things: The Unsung Creative Act</h2>
 
-            <p>
-              They say there are only two hard problems in computer science: cache invalidation and naming things. I'd argue that naming is fundamentally a creative act.
-            </p>
+        <p>
+          They say there are only two hard problems in computer science: cache invalidation and naming things. I'd argue that naming is fundamentally a creative act.
+        </p>
 
-            <p>
-              A well-named variable or function doesn't just describe what something does—it tells a story. It makes code self-documenting. It creates a mental model for anyone reading it. Finding that perfect name, the one that just clicks, is as satisfying as writing a great line of prose.
-            </p>
+        <p>
+          A well-named variable or function doesn't just describe what something does—it tells a story. It makes code self-documenting. It creates a mental model for anyone reading it. Finding that perfect name, the one that just clicks, is as satisfying as writing a great line of prose.
+        </p>
 
-            <h2 style="margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">The Creative Process in Debugging</h2>
+        <h2>The Creative Process in Debugging</h2>
 
-            <p>
-              Debugging might seem like the least creative part of programming, but I've found it to be one of the most imaginative. When you're tracking down a bug, you're a detective piecing together clues, forming hypotheses, and testing theories. You're thinking laterally, considering edge cases, and sometimes making creative leaps to understand what's going wrong.
-            </p>
+        <p>
+          Debugging might seem like the least creative part of programming, but I've found it to be one of the most imaginative. When you're tracking down a bug, you're a detective piecing together clues, forming hypotheses, and testing theories. You're thinking laterally, considering edge cases, and sometimes making creative leaps to understand what's going wrong.
+        </p>
 
-            <p>
-              The "aha!" moment when you finally understand a bug? That's creative insight in action.
-            </p>
+        <p>
+          The "aha!" moment when you finally understand a bug? That's creative insight in action.
+        </p>
 
-            <h2 style="margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">Embracing the Creative Side</h2>
+        <h2>Embracing the Creative Side</h2>
 
-            <p>
-              So what does it mean to embrace creativity in coding? For me, it's about:
-            </p>
+        <p>
+          So what does it mean to embrace creativity in coding? For me, it's about:
+        </p>
 
-            <ul style="margin-left: var(--spacing-xl); margin-bottom: var(--spacing-md); line-height: var(--line-height-relaxed);">
-              <li><strong>Taking time to refactor:</strong> Don't just make it work—make it beautiful.</li>
-              <li><strong>Exploring different approaches:</strong> The first solution that works isn't always the best one.</li>
-              <li><strong>Reading great code:</strong> Just like writers read great literature, programmers should study elegant code.</li>
-              <li><strong>Experimenting without judgment:</strong> Not every creative experiment will work out, and that's okay.</li>
-              <li><strong>Finding joy in the craft:</strong> Programming is both science and art. Enjoy both aspects.</li>
-            </ul>
+        <ul>
+          <li><strong>Taking time to refactor:</strong> Don't just make it work—make it beautiful.</li>
+          <li><strong>Exploring different approaches:</strong> The first solution that works isn't always the best one.</li>
+          <li><strong>Reading great code:</strong> Just like writers read great literature, programmers should study elegant code.</li>
+          <li><strong>Experimenting without judgment:</strong> Not every creative experiment will work out, and that's okay.</li>
+          <li><strong>Finding joy in the craft:</strong> Programming is both science and art. Enjoy both aspects.</li>
+        </ul>
 
-            <h2 style="margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">Final Thoughts</h2>
+        <h2>Final Thoughts</h2>
 
-            <p>
-              Creativity in code isn't about writing unnecessarily complex solutions or showing off. It's about approaching problems with an open mind, crafting solutions that are both functional and beautiful, and finding satisfaction in the artistry of well-written code.
-            </p>
+        <p>
+          Creativity in code isn't about writing unnecessarily complex solutions or showing off. It's about approaching problems with an open mind, crafting solutions that are both functional and beautiful, and finding satisfaction in the artistry of well-written code.
+        </p>
 
-            <p>
-              Whether you're building a web app, writing a script, or debugging a thorny issue, remember: you're not just a programmer. You're a creator. And that's something worth celebrating.
-            </p>
+        <p>
+          Whether you're building a web app, writing a script, or debugging a thorny issue, remember: you're not just a programmer. You're a creator. And that's something worth celebrating.
+        </p>
 
-            <div style="margin-top: var(--spacing-3xl); padding-top: var(--spacing-xl); border-top: 2px solid var(--gray);">
-              <p style="color: var(--text-secondary); font-style: italic;">
-                What's your take on creativity in programming? I'd love to hear your thoughts. Feel free to reach out on any of my social channels.
-              </p>
-            </div>
+        <p style="border-top: 1.5px dashed var(--ink-faint); padding-top: var(--space-3); font-style: italic;">
+          What's your take on creativity in programming? I'd love to hear your thoughts — my inbox is always open.
+        </p>
 
-          </div>
+        <span class="article-sign">— jane ✿</span>
+
+        <div style="margin-top: var(--space-5); display: flex; gap: var(--space-2); flex-wrap: wrap;">
+          <a href="blog.html" class="btn">← All notes</a>
+          <a href="blog-learning-in-public.html" class="btn btn--fill">Next: Learning in Public →</a>
         </div>
       </div>
-
-      <!-- Related Posts -->
-      <section class="section" style="background-color: var(--off-white);">
-        <div class="container container--narrow">
-          <h2 style="margin-bottom: var(--spacing-lg);">Related Posts</h2>
-
-          <div class="grid" style="gap: var(--spacing-md);">
-            <div class="card">
-              <h3 class="card__title">Learning in Public</h3>
-              <p class="card__description">
-                Sharing your learning journey can feel vulnerable, but it's one of the most effective ways to grow.
-              </p>
-              <a href="blog-learning-in-public.html" class="blog-card__read-more">Read more</a>
-            </div>
-
-            <div class="card">
-              <h3 class="card__title">The Art of Finding Balance</h3>
-              <p class="card__description">
-                In our always-on world, finding balance feels like dancing with chaos. Here's what I've learned.
-              </p>
-              <a href="blog-balance.html" class="blog-card__read-more">Read more</a>
-            </div>
-          </div>
-
-          <div class="text-center mt-xl">
-            <a href="blog.html" class="btn btn--outline">View All Posts</a>
-          </div>
-        </div>
-      </section>
 
     </article>
-
   </main>
 
-  <!-- Footer -->
+  <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
-    <div class="footer__content">
-      <p class="footer__text">
-        Made with care by Jane Wang
+    <div class="container">
+      <span class="section-kicker">this could be the start of something</span>
+      <h2 class="footer__title">Let's be <em>friends</em></h2>
+      <p class="footer__blurb">
+        Always happy to chat — about a project, an idea, tennis, or where to find the best dumplings in Philly.
       </p>
       <div class="footer__links">
-        <a href="https://linkedin.com/in/janelianwang/" class="footer__link">LinkedIn</a>
-        <a href="mailto:jane2027@wharton.upenn.edu" class="footer__link">Email</a>
+        <a href="mailto:jane2027@wharton.upenn.edu" class="btn btn--fill">Email me 💌</a>
+        <a href="https://linkedin.com/in/janelianwang/" class="btn">LinkedIn ↗</a>
       </div>
-      <p class="footer__text text-light mt-sm">
-        &copy; 2026 Jane Wang. All rights reserved.
-      </p>
+      <p class="footer__fine">© 2026 Jane Wang · handmade with <span class="hand">a lot of</span> sticky notes</p>
     </div>
   </footer>
 
-  <!-- JavaScript Files -->
   <script src="js/main.js"></script>
-  <script src="js/components.js"></script>
 
 </body>
 </html>
