@@ -3,258 +3,231 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Jane Wang's hobbies and interests — tennis, pottery, cooking, travel, and more">
-  <title>Hobbies | Jane Wang</title>
+  <meta name="description" content="Jane Wang's hobbies — tennis, pottery, cooking, travel, paragliding, and more things that keep her human.">
+  <title>Hobbies — Jane Wang</title>
 
-  <!-- CSS Files -->
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages.css">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✿</text></svg>">
 </head>
-<body>
+<body class="theme-mint">
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="navbar__container">
-      <a href="index.html" class="navbar__brand">Jane Wang</a>
+  <!-- ===================== NAV ===================== -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__brand">jane <em>wang</em></a>
 
-      <div class="navbar__nav">
-        <a href="index.html" class="navbar__link">Home</a>
-        <a href="about.html" class="navbar__link">About</a>
-        <a href="hobbies.html" class="navbar__link">Hobbies</a>
-        <a href="blog.html" class="navbar__link">Blog</a>
-        <a href="projects.html" class="navbar__link">Projects</a>
+      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+      <div class="nav__links">
+        <a href="about.html" class="nav__link">About</a>
+        <a href="hobbies.html" class="nav__link">Hobbies</a>
+        <a href="projects.html" class="nav__link">Projects</a>
+        <a href="blog.html" class="nav__link">Blog</a>
+        <a href="mailto:jane2027@wharton.upenn.edu" class="btn btn--fill btn--sm nav__cta">Say hi ✿</a>
       </div>
-
-      <button class="navbar__toggle" aria-label="Toggle navigation" aria-expanded="false">
-        ☰
-      </button>
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <main class="page-content">
+  <main>
 
-    <!-- Hero Section -->
-    <section class="hero" style="background: linear-gradient(135deg, var(--mint), var(--secondary-light)); min-height: 40vh;">
-      <div class="hero__content">
-        <h1 class="hero__title">My Hobbies & Interests</h1>
-        <p class="hero__subtitle">
-          The things that bring joy and meaning to my life
+    <!-- ===================== PAGE HERO ===================== -->
+    <header class="page-hero">
+      <div class="container">
+        <span class="section-kicker">life outside the spreadsheet</span>
+        <h1 class="page-hero__title">Things I <em>love</em></h1>
+        <p class="section-lede">
+          Work is a big part of my life, but it's not the whole story. These are the things
+          that keep me inspired, energized, and slightly covered in clay.
         </p>
       </div>
-    </section>
+    </header>
 
-    <!-- Hobbies Content -->
-    <section class="section">
+    <!-- ===================== FEATURE HOBBIES (with illustrations) ===================== -->
+    <section class="section--tight">
       <div class="container">
 
-        <!-- Introduction -->
-        <div class="content-section text-center" style="max-width: 800px; margin: 0 auto var(--spacing-xl);">
-          <p style="font-size: var(--font-lg); color: var(--text-secondary); line-height: var(--line-height-relaxed);">
-            Life is so much more than work! Here are some of the activities and interests that keep me inspired, energized, and constantly learning new things.
-          </p>
+        <div class="hobby-feature">
+          <div class="hobby-feature__media reveal">
+            <div class="sticker sticker--tilt-l">
+              <img src="images/tennis_jane.png" alt="Illustration of Jane playing tennis">
+              <p class="sticker__caption">chasing every ball 🎾</p>
+            </div>
+          </div>
+          <div class="reveal" data-delay="1">
+            <h3>Tennis</h3>
+            <p style="margin-bottom: var(--space-2);">
+              The court is where I clear my head and get my competitive fix. Tennis teaches me
+              discipline, strategy, and resilience — and I will absolutely sprint for a ball
+              I have no business reaching.
+            </p>
+            <span class="hand">current mission: a topspin backhand that actually lands in</span>
+            <div class="tag-row" style="margin-top: var(--space-2);">
+              <span class="tag tag--fill">Competitive</span>
+              <span class="tag">Weekly ritual</span>
+            </div>
+          </div>
         </div>
 
-        <!-- Hobbies Grid -->
-        <div class="grid grid--3">
-
-          <!-- Hobby 1: Reading & Learning -->
-          <div class="card hobby-card">
-            <div class="hobby-card__icon">
-              📚
-            </div>
-            <h3 class="card__title">Reading & Learning</h3>
-            <p class="card__description">
-              I'm an avid reader who loves getting lost in both fiction and non-fiction. There's nothing quite like discovering new perspectives through a great book. Currently diving into philosophy, psychology, and creative writing!
-            </p>
-            <div class="card__footer">
-              <span class="tag tag--primary">Books</span>
-              <span class="tag">Learning</span>
+        <div class="hobby-feature">
+          <div class="hobby-feature__media reveal">
+            <div class="sticker sticker--tilt-r">
+              <img src="images/pottery_jane.png" alt="Illustration of Jane at a pottery wheel">
+              <p class="sticker__caption">wheel therapy 🏺</p>
             </div>
           </div>
-
-          <!-- Hobby 2: Music & Singing -->
-          <div class="card hobby-card">
-            <div class="hobby-card__icon">
-              🎵
-            </div>
-            <h3 class="card__title">Music & Singing</h3>
-            <p class="card__description">
-              Music is a huge part of my life. I love singing acapella pop renditions and curating playlists for every mood. From indie folk to EDM, my taste is eclectic and always evolving.
+          <div class="reveal" data-delay="1">
+            <h3>Pottery</h3>
+            <p style="margin-bottom: var(--space-2);">
+              There's something deeply satisfying about shaping clay on a wheel. Pottery forces
+              you to slow down, be present, and embrace imperfection — a good lesson for
+              recovering perfectionists.
             </p>
-            <div class="card__footer">
-              <span class="tag tag--secondary">Music</span>
+            <span class="hand">my mugs are "rustic." on purpose. mostly.</span>
+            <div class="tag-row" style="margin-top: var(--space-2);">
+              <span class="tag tag--fill">Creative</span>
+              <span class="tag">Hands-on</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hobby-feature">
+          <div class="hobby-feature__media reveal">
+            <div class="sticker sticker--tilt-l">
+              <img src="images/cooking_jane.png" alt="Illustration of Jane cooking">
+              <p class="sticker__caption">kitchen experiments 🍳</p>
+            </div>
+          </div>
+          <div class="reveal" data-delay="1">
+            <h3>Cooking &amp; Baking</h3>
+            <p style="margin-bottom: var(--space-2);">
+              Transforming simple ingredients into something delicious feels like magic.
+              I love experimenting with new recipes, chasing international cuisines, and
+              baking treats for friends who have learned to trust me (mostly).
+            </p>
+            <span class="hand">signature move: improvising when I'm missing 3 ingredients</span>
+            <div class="tag-row" style="margin-top: var(--space-2);">
+              <span class="tag tag--fill">Culinary</span>
               <span class="tag">Creative</span>
             </div>
           </div>
+        </div>
 
-          <!-- Hobby 3: Cooking & Baking -->
-          <div class="card hobby-card">
-            <div class="hobby-card__icon">
-              🍳
-            </div>
-            <h3 class="card__title">Cooking & Baking</h3>
-            <p class="card__description">
-              There's something magical about transforming simple ingredients into delicious creations. I love experimenting with new recipes, trying international cuisines, and baking treats for friends and family.
-            </p>
-            <div class="card__footer">
-              <span class="tag tag--accent">Culinary</span>
-              <span class="tag">Creative</span>
+        <div class="hobby-feature">
+          <div class="hobby-feature__media reveal">
+            <div class="sticker sticker--tilt-r">
+              <img src="images/travel_jane.png" alt="Illustration of Jane traveling">
+              <p class="sticker__caption">passport always ready ✈️</p>
             </div>
           </div>
-
-          <!-- Hobby 4: Nature & Hiking -->
-          <div class="card hobby-card">
-            <div class="hobby-card__icon">
-              🌲
-            </div>
-            <h3 class="card__title">Nature & Hiking</h3>
-            <p class="card__description">
-              Getting outdoors and connecting with nature is essential for my well-being. Whether it's a peaceful walk in the park or an adventurous mountain hike, being in nature helps me reset and recharge.
+          <div class="reveal" data-delay="1">
+            <h3>Travel</h3>
+            <p style="margin-bottom: var(--space-2);">
+              Exploring new places, getting deliberately lost, and collecting stories from
+              around the world. Traveling reminds me how big and beautiful the world is —
+              and how much is left to see.
             </p>
-            <div class="card__footer">
-              <span class="tag tag--primary">Outdoors</span>
-              <span class="tag">Wellness</span>
-            </div>
-          </div>
-
-          <!-- Hobby 5: Tennis -->
-          <div class="card hobby-card">
-            <div class="hobby-card__icon">
-              🎾
-            </div>
-            <h3 class="card__title">Tennis</h3>
-            <p class="card__description">
-              Tennis teaches me discipline, strategy, and resilience. Whether it's perfecting my serve or analyzing match tactics, the court is where I clear my mind and challenge myself physically and mentally.
-            </p>
-            <div class="card__footer">
-              <span class="tag tag--secondary">Athletic</span>
-              <span class="tag">Competitive</span>
-            </div>
-          </div>
-
-          <!-- Hobby 6: Golf -->
-          <div class="card hobby-card">
-            <div class="hobby-card__icon">
-              ⛳
-            </div>
-            <h3 class="card__title">Golf</h3>
-            <p class="card__description">
-              I'm a proud beginner golfer who loses more balls than I'd like to admit. But there's something peaceful about being out on the course, and I love the slow process of getting a little better each time.
-            </p>
-            <div class="card__footer">
-              <span class="tag tag--accent">Athletic</span>
-              <span class="tag">Beginner</span>
-            </div>
-          </div>
-
-          <!-- Hobby 7: Travel -->
-          <div class="card hobby-card">
-            <div class="hobby-card__icon">
-              ✈️
-            </div>
-            <h3 class="card__title">Travel</h3>
-            <p class="card__description">
-              Exploring new places, immersing myself in different cultures, and collecting stories from around the world. Traveling reminds me how big and beautiful the world is — and how much there is left to see.
-            </p>
-            <div class="card__footer">
-              <span class="tag tag--primary">Adventure</span>
+            <span class="hand">yes, I have flight-deal alerts set. many of them.</span>
+            <div class="tag-row" style="margin-top: var(--space-2);">
+              <span class="tag tag--fill">Adventure</span>
               <span class="tag">Culture</span>
             </div>
           </div>
-
-          <!-- Hobby 8: Arts & Crafts -->
-          <div class="card hobby-card">
-            <div class="hobby-card__icon">
-              🎨
-            </div>
-            <h3 class="card__title">Arts & Crafts</h3>
-            <p class="card__description">
-              I love working with my hands and creating things from scratch. Whether it's painting, sketching, or trying new craft projects, the creative process is therapeutic and endlessly rewarding.
-            </p>
-            <div class="card__footer">
-              <span class="tag tag--secondary">Art</span>
-              <span class="tag">Handmade</span>
-            </div>
-          </div>
-
-          <!-- Hobby 9: Pottery -->
-          <div class="card hobby-card">
-            <div class="hobby-card__icon">
-              🏺
-            </div>
-            <h3 class="card__title">Pottery</h3>
-            <p class="card__description">
-              There's something deeply satisfying about shaping clay on a wheel. Pottery has become one of my favorite creative outlets — it forces you to slow down, be present, and embrace imperfection.
-            </p>
-            <div class="card__footer">
-              <span class="tag tag--accent">Creative</span>
-              <span class="tag">Hands-On</span>
-            </div>
-          </div>
-
         </div>
 
-        <!-- Currently Exploring Section -->
-        <div class="content-section" style="margin-top: var(--spacing-3xl);">
-          <h2 class="content-section__title">Currently Exploring</h2>
-
-          <div class="grid grid--2">
-            <div style="background: linear-gradient(135deg, var(--primary-light), var(--accent-light)); padding: var(--spacing-xl); border-radius: var(--radius-lg);">
-              <h3 style="margin-bottom: var(--spacing-md);">📈 Investing</h3>
-              <p style="color: var(--text-secondary);">
-                Diving into the world of personal investing and financial markets. Between my MBA coursework and real-world experience in private equity, I'm learning to think about capital allocation in new ways.
-              </p>
+        <div class="hobby-feature">
+          <div class="hobby-feature__media reveal">
+            <div class="sticker sticker--tilt-l">
+              <img src="images/paragliding_jane.png" alt="Illustration of Jane paragliding">
+              <p class="sticker__caption">zero fear, all sky 🪂</p>
             </div>
-
-            <div style="background: linear-gradient(135deg, var(--secondary-light), var(--mint)); padding: var(--spacing-xl); border-radius: var(--radius-lg);">
-              <h3 style="margin-bottom: var(--spacing-md);">📱 Digital Minimalism</h3>
-              <p style="color: var(--text-secondary);">
-                Learning to be more intentional with technology use and creating healthier digital habits. It's a journey of finding balance in our always-connected world.
-              </p>
+          </div>
+          <div class="reveal" data-delay="1">
+            <h3>Paragliding &amp; saying yes</h3>
+            <p style="margin-bottom: var(--space-2);">
+              My rule: say yes to things that scare you a little. That's how I ended up running
+              off the side of a mountain — and it's one of the best decisions I've ever made.
+            </p>
+            <span class="hand">the ground is overrated anyway</span>
+            <div class="tag-row" style="margin-top: var(--space-2);">
+              <span class="tag tag--fill">Adrenaline</span>
+              <span class="tag">Say yes</span>
             </div>
           </div>
         </div>
 
-        <!-- Call to Action -->
-        <div class="text-center" style="margin-top: var(--spacing-3xl);">
-          <div style="background: var(--white); padding: var(--spacing-xl); border-radius: var(--radius-xl); max-width: 600px; margin: 0 auto; box-shadow: var(--shadow-md);">
-            <h2 style="margin-bottom: var(--spacing-md);">Let's Share!</h2>
-            <p style="color: var(--text-secondary); margin-bottom: var(--spacing-lg);">
-              I'd love to hear about your hobbies and interests too! What are you passionate about?
-            </p>
-            <a href="blog.html" class="btn btn--primary">Read My Blog</a>
-          </div>
-        </div>
+      </div>
+    </section>
 
+    <!-- ===================== MORE HOBBIES (mini cards) ===================== -->
+    <section class="section">
+      <div class="container">
+        <span class="section-kicker reveal">and when I'm not doing those…</span>
+        <h2 class="section-title reveal" style="font-size: var(--text-2xl);">The <span class="hl">supporting cast</span></h2>
+
+        <div class="grid-3" style="margin-top: var(--space-4);">
+
+          <div class="card card--hover hobby-mini reveal">
+            <div class="card__emoji">📚</div>
+            <h3 class="card__title">Reading</h3>
+            <p>Fiction, philosophy, psychology — I'll disappear into anything with a good idea inside it.</p>
+          </div>
+
+          <div class="card card--hover hobby-mini reveal" data-delay="1">
+            <div class="card__emoji">🎤</div>
+            <h3 class="card__title">Singing</h3>
+            <p>Acapella pop covers, sung with more enthusiasm than my neighbors would prefer.</p>
+          </div>
+
+          <div class="card card--hover hobby-mini reveal" data-delay="2">
+            <div class="card__emoji">⛳</div>
+            <h3 class="card__title">Golf (beginner)</h3>
+            <p>I lose more balls than I'd like to admit, but the slow climb of getting better is the whole point.</p>
+          </div>
+
+          <div class="card card--hover hobby-mini reveal">
+            <div class="card__emoji">🎨</div>
+            <h3 class="card__title">Arts &amp; crafts</h3>
+            <p>Painting, sketching, and any project that lets me make something with my hands.</p>
+          </div>
+
+          <div class="card card--hover hobby-mini reveal" data-delay="1">
+            <div class="card__emoji">📈</div>
+            <h3 class="card__title">Investing</h3>
+            <p>Between MBA coursework and PE experience, I'm learning to think about capital allocation in new ways.</p>
+          </div>
+
+          <div class="card card--hover hobby-mini reveal" data-delay="2">
+            <div class="card__emoji">🎧</div>
+            <h3 class="card__title">EDM festivals</h3>
+            <p>I have strong, extensively researched opinions about festival logistics. Ask me about them.</p>
+          </div>
+
+        </div>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer -->
+  <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
-    <div class="footer__content">
-      <p class="footer__text">
-        Made with care by Jane Wang
+    <div class="container">
+      <span class="section-kicker">this could be the start of something</span>
+      <h2 class="footer__title">Let's be <em>friends</em></h2>
+      <p class="footer__blurb">
+        Always happy to chat — about a project, an idea, tennis, or where to find the best dumplings in Philly.
       </p>
       <div class="footer__links">
-        <a href="https://linkedin.com/in/janelianwang/" class="footer__link">LinkedIn</a>
-        <a href="mailto:jane2027@wharton.upenn.edu" class="footer__link">Email</a>
+        <a href="mailto:jane2027@wharton.upenn.edu" class="btn btn--fill">Email me 💌</a>
+        <a href="https://linkedin.com/in/janelianwang/" class="btn">LinkedIn ↗</a>
       </div>
-      <p class="footer__text text-light mt-sm">
-        &copy; 2026 Jane Wang. All rights reserved.
-      </p>
+      <p class="footer__fine">© 2026 Jane Wang · handmade with <span class="hand">a lot of</span> sticky notes</p>
     </div>
   </footer>
 
-  <!-- JavaScript Files -->
   <script src="js/main.js"></script>
-  <script src="js/components.js"></script>
 
 </body>
 </html>

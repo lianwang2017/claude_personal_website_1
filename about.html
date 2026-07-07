@@ -3,249 +3,224 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="About Jane Wang — engineer, MBA candidate, and lifelong learner">
-  <title>About | Jane Wang</title>
+  <meta name="description" content="About Jane Wang — engineer, Wharton MBA candidate, and lifelong explorer. The full story, with a flight map.">
+  <title>About — Jane Wang</title>
 
-  <!-- CSS Files -->
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages.css">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✿</text></svg>">
 </head>
-<body>
+<body class="theme-sky">
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="navbar__container">
-      <a href="index.html" class="navbar__brand">Jane Wang</a>
+  <!-- ===================== NAV ===================== -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__brand">jane <em>wang</em></a>
 
-      <div class="navbar__nav">
-        <a href="index.html" class="navbar__link">Home</a>
-        <a href="about.html" class="navbar__link">About</a>
-        <a href="hobbies.html" class="navbar__link">Hobbies</a>
-        <a href="blog.html" class="navbar__link">Blog</a>
-        <a href="projects.html" class="navbar__link">Projects</a>
+      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+      <div class="nav__links">
+        <a href="about.html" class="nav__link">About</a>
+        <a href="hobbies.html" class="nav__link">Hobbies</a>
+        <a href="projects.html" class="nav__link">Projects</a>
+        <a href="blog.html" class="nav__link">Blog</a>
+        <a href="mailto:jane2027@wharton.upenn.edu" class="btn btn--fill btn--sm nav__cta">Say hi ✿</a>
       </div>
-
-      <button class="navbar__toggle" aria-label="Toggle navigation" aria-expanded="false">
-        ☰
-      </button>
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <main class="page-content">
+  <main>
 
-    <!-- Hero Section -->
-    <section class="hero" style="background: linear-gradient(135deg, var(--primary-light), var(--accent-light)); min-height: 40vh;">
-      <div class="hero__content">
-        <h1 class="hero__title">About Me</h1>
-        <p class="hero__subtitle">
-          Engineer at heart. Builder by nature. Endlessly curious.
+    <!-- ===================== PAGE HERO ===================== -->
+    <header class="page-hero">
+      <div class="container">
+        <span class="section-kicker">nice to meet you, officially</span>
+        <h1 class="page-hero__title">The <em>full</em> story</h1>
+        <p class="section-lede">
+          Builder, thinker, and someone who has never been able to pick just one thing —
+          so I stopped trying.
         </p>
+      </div>
+    </header>
+
+    <!-- ===================== INTRO ===================== -->
+    <section class="section--tight">
+      <div class="container about-intro">
+
+        <div class="sticker sticker--tilt-l reveal" style="max-width: 340px; margin-inline: auto;">
+          <img src="images/professional_jane.png" alt="Illustration of Jane Wang in business attire">
+          <p class="sticker__caption">reporting for duty ✿</p>
+        </div>
+
+        <div class="reveal" data-delay="1">
+          <h2 class="section-title" style="font-size: var(--text-2xl);">Hello, I'm Jane 👋</h2>
+          <p style="margin-bottom: var(--space-3);">
+            I grew up in Southern California and have spent my career moving between engineering,
+            strategy, and the messy, exciting spaces in between. I wrote code at Google, analyzed
+            pension funds in Connecticut, and now I'm at Wharton getting my MBA — with the Harvard
+            Kennedy School up next.
+          </p>
+          <p>
+            The through-line? <strong>Curiosity, people, and building things that matter.</strong>
+          </p>
+
+          <ul class="facts-list">
+            <li>Wharton MBA '27 — Finance &amp; Operations</li>
+            <li>Harvard Kennedy School MPP, starting Fall 2026</li>
+            <li>Former Software Engineer at Google (Connected TV ads)</li>
+            <li>USC Computer Science BS + MS</li>
+            <li>Fluent in Mandarin</li>
+          </ul>
+
+          <div style="display: flex; gap: var(--space-2); margin-top: var(--space-3); flex-wrap: wrap;">
+            <a href="https://linkedin.com/in/janelianwang/" class="btn btn--sm">LinkedIn ↗</a>
+            <a href="mailto:jane2027@wharton.upenn.edu" class="btn btn--sm btn--fill">Email me 💌</a>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <!-- About Content -->
+    <!-- ===================== JOURNEY MAP ===================== -->
+    <!-- Pins, flight paths & stories are configured in js/map.js (JOURNEY_STOPS) -->
     <section class="section">
       <div class="container">
-        <div class="about-content">
+        <span class="section-kicker reveal">buckle up — window seat recommended</span>
+        <h2 class="section-title reveal">Five cities, one <span class="hl">journey</span></h2>
+        <p class="section-lede reveal" style="margin-bottom: var(--space-4);">
+          Click a pin to read that chapter. The faint dotted leg is where I'm headed next.
+        </p>
 
-          <!-- Profile Sidebar -->
-          <div class="about-profile">
-            <img src="images/professional_jane.png" alt="Jane Wang" class="about-profile__image" />
-            <h2 class="about-profile__name">Jane Wang</h2>
-            <p class="about-profile__title">MBA Candidate, Wharton '27</p>
+        <div class="map-wrap reveal">
+          <svg id="journey-map" viewBox="0 0 800 470" role="img" aria-label="Hand-drawn map of the United States showing Jane's journey from Los Angeles to the Bay Area, Hartford, Philadelphia, and Cambridge">
+            <defs>
+              <!-- roughen filter gives the outline a hand-sketched wobble -->
+              <filter id="rough">
+                <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" result="n"/>
+                <feDisplacementMap in="SourceGraphic" in2="n" scale="6"/>
+              </filter>
+            </defs>
 
-            <!-- Social Links -->
-            <div class="mt-md">
-              <div style="display: flex; gap: var(--spacing-sm); justify-content: center; flex-wrap: wrap;">
-                <a href="https://linkedin.com/in/janelianwang/" class="btn btn--sm btn--outline">LinkedIn</a>
-                <a href="mailto:jane2027@wharton.upenn.edu" class="btn btn--sm btn--outline">Email</a>
-              </div>
+            <!-- simplified, sketch-style US outline -->
+            <path class="map-outline" filter="url(#rough)" d="M 24 31
+              L 28 143 L 36 171 L 52 217 L 78 275 L 108 288 L 122 310
+              L 154 318 L 258 323 L 297 372 L 348 397 L 374 427
+              L 406 367 L 471 372 L 535 354
+              L 560 395 L 585 440 L 597 428 L 592 383 L 580 349
+              L 601 305 L 658 263 L 651 235 L 677 166 L 716 136 L 740 110 L 767 94
+              L 724 50 L 660 90 L 613 120 L 561 143 L 539 76 L 497 45 L 406 20 Z"/>
+
+            <!-- pins, flight arcs & plane are injected here by js/map.js -->
+            <g id="map-layer"></g>
+          </svg>
+        </div>
+
+        <!-- Story panel — filled in by js/map.js -->
+        <div class="journey-story reveal">
+          <div class="journey-story__num">01</div>
+          <div>
+            <div class="card__meta">
+              <span class="journey-story__place">📍 Los Angeles, CA</span>
+              <span>·</span>
+              <span class="journey-story__years">2017 – 2022</span>
             </div>
-
-            <!-- Quick Stats -->
-            <div class="mt-lg" style="background: var(--light-gray); padding: var(--spacing-md); border-radius: var(--radius-md);">
-              <h3 style="font-size: var(--font-md); margin-bottom: var(--spacing-sm);">Quick Facts</h3>
-              <ul style="text-align: left; color: var(--text-secondary); font-size: var(--font-sm); line-height: 2;">
-                <li>Wharton MBA '27 (Finance & Operations)</li>
-                <li>Harvard Kennedy School MPP (Fall '26)</li>
-                <li>Former Software Engineer at Google</li>
-                <li>USC Computer Science BS + MS</li>
-                <li>Fluent in Mandarin</li>
-              </ul>
+            <h3 class="journey-story__title"></h3>
+            <p class="journey-story__text"></p>
+            <div class="journey-story__nav">
+              <button class="btn btn--sm journey-prev" aria-label="Previous stop">← Prev stop</button>
+              <button class="btn btn--sm btn--fill journey-next" aria-label="Next stop">Next stop →</button>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <!-- Bio Content -->
-          <div class="about-bio">
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section--tight">
+      <div class="container">
+        <span class="section-kicker reveal">the toolkit</span>
+        <h2 class="section-title reveal" style="font-size: var(--text-2xl);">Equal parts <span class="hl">technical</span> and <span class="hl">strategic</span></h2>
 
-            <!-- Introduction -->
-            <div class="about-bio__section">
-              <h2 class="about-bio__heading">Hello!</h2>
-              <p>
-                I'm Jane — a builder, thinker, and someone who has never been able to pick just one thing. I grew up in Southern California and have spent my career moving between engineering, strategy, and the messy, exciting spaces in between. This website is my attempt to share a bit of that journey with you.
-              </p>
-            </div>
+        <div class="tag-row reveal" style="margin-top: var(--space-3); max-width: 720px;">
+          <span class="tag tag--fill">Python</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">C/C++</span>
+          <span class="tag">Java</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Git</span>
+          <span class="tag tag--fill">Financial Analysis</span>
+          <span class="tag tag--fill">Product Strategy</span>
+          <span class="tag tag--fill">AI/ML Tools</span>
+          <span class="tag tag--fill">Cross-Functional Leadership</span>
+          <span class="tag tag--fill">Mandarin (fluent)</span>
+        </div>
+      </div>
+    </section>
 
-            <!-- My Journey — Timeline -->
-            <div class="about-bio__section">
-              <h2 class="about-bio__heading">My Journey</h2>
+    <!-- ===================== WHAT DRIVES ME ===================== -->
+    <section class="section">
+      <div class="container">
+        <span class="section-kicker reveal">why I do any of this</span>
+        <h2 class="section-title reveal">What drives me</h2>
 
-              <div class="timeline">
-
-                <div class="timeline__item">
-                  <div class="timeline__marker" style="background-color: var(--peach);"></div>
-                  <div class="timeline__content">
-                    <h3 class="timeline__year">Fall 2026 | What's Next — Harvard Kennedy School</h3>
-                    <p>
-                      I'm thrilled to share that I was recently admitted to the Harvard Kennedy School of Public Policy, which I'll be starting this coming fall. It's a chance to explore the policy dimensions of the questions I care about most — how technology shapes communities, how capital flows can be more equitable, and how we build systems that actually work for people. I can't wait to see where this next chapter takes me.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="timeline__item">
-                  <div class="timeline__marker" style="background-color: var(--accent);"></div>
-                  <div class="timeline__content">
-                    <h3 class="timeline__year">2025 - Present | Wharton</h3>
-                    <p>
-                      Now I'm at Wharton pursuing my MBA with a major in Finance and Operations & Marketing. I'm part of the General Management Club, Marketing Club, Real Estate Club, and the ETA Club — because, true to form, I can't pick just one thing. The Wharton community has been an incredible space to stretch my thinking and connect with people who are just as restless and ambitious.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="timeline__item">
-                  <div class="timeline__marker" style="background-color: var(--secondary);"></div>
-                  <div class="timeline__content">
-                    <h3 class="timeline__year">2025 | Pivoting into Finance & Policy</h3>
-                    <p>
-                      The summer before Wharton, I dove headfirst into the world of finance. At the State of Connecticut Treasurer's Office, I helped analyze private markets for the state's pension fund — and I even built an AI tool that cut manual review time by hours. At United Generations Capital, I'm getting hands-on experience in private equity, supporting deal evaluation and advising portfolio companies on how to integrate AI into their operations. These experiences have shown me that the best solutions live at the intersection of technology, business, and thoughtful policy.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="timeline__item">
-                  <div class="timeline__marker" style="background-color: var(--primary);"></div>
-                  <div class="timeline__content">
-                    <h3 class="timeline__year">2022 - 2025 | Google</h3>
-                    <p>
-                      After graduating, I joined Google as a software engineer on the Connected TV ads team. What started as writing code quickly turned into something much bigger — I ended up leading cross-functional projects that spanned engineering, product, and sales teams across multiple offices. One of my proudest moments was spearheading a CTV initiative that drove a meaningful revenue increase. But beyond the numbers, I cared most about the people. I built mentorship and onboarding programs for over 80 new grad employees, because I remembered what it felt like to be new and want someone in your corner. After three incredible years, I felt a pull toward something different — I wanted to understand the business side of technology, not just build it.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="timeline__item">
-                  <div class="timeline__marker" style="background-color: var(--mint);"></div>
-                  <div class="timeline__content">
-                    <h3 class="timeline__year">2017 - 2022 | USC</h3>
-                    <p>
-                      I landed at the University of Southern California at 17, wide-eyed and determined to figure out how things work. I fell in love with computer science — not just the logic of it, but the feeling of building something from nothing. I stayed for a combined BS and MS, and along the way helped run Trojan Consulting Group, where I got my first taste of strategy work advising on market analysis for companies like SpaceX's Starlink. Those years taught me how to think in systems, move fast, and work with people who challenge you.
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <!-- Skills -->
-            <div class="about-bio__section">
-              <h2 class="about-bio__heading">Skills & Toolkit</h2>
-              <p class="mb-md">
-                A mix of the technical and the strategic:
-              </p>
-
-              <div class="skills-list">
-                <span class="tag tag--primary">Python</span>
-                <span class="tag tag--secondary">JavaScript</span>
-                <span class="tag tag--accent">C/C++</span>
-                <span class="tag">Java</span>
-                <span class="tag">SQL</span>
-                <span class="tag">HTML/CSS</span>
-                <span class="tag">Git</span>
-                <span class="tag tag--primary">Financial Analysis</span>
-                <span class="tag tag--secondary">Product Strategy</span>
-                <span class="tag tag--accent">AI/ML Tools</span>
-                <span class="tag">Cross-Functional Leadership</span>
-                <span class="tag">Mandarin (Fluent)</span>
-              </div>
-            </div>
-
-            <!-- What Drives Me -->
-            <div class="about-bio__section">
-              <h2 class="about-bio__heading">What Drives Me</h2>
-              <div class="grid grid--2" style="margin-top: var(--spacing-md);">
-                <div style="background: var(--primary-light); padding: var(--spacing-md); border-radius: var(--radius-md);">
-                  <h4 style="margin-bottom: var(--spacing-xs);">Curiosity</h4>
-                  <p style="font-size: var(--font-sm);">I've never been able to stay in one lane — and I've stopped trying to. The best ideas come from connecting dots across fields.</p>
-                </div>
-                <div style="background: var(--secondary-light); padding: var(--spacing-md); border-radius: var(--radius-md);">
-                  <h4 style="margin-bottom: var(--spacing-xs);">Impact</h4>
-                  <p style="font-size: var(--font-sm);">Whether it's mentoring new grads or building AI tools for pension funds, I want the work I do to make things better for real people.</p>
-                </div>
-                <div style="background: var(--accent-light); padding: var(--spacing-md); border-radius: var(--radius-md);">
-                  <h4 style="margin-bottom: var(--spacing-xs);">Community</h4>
-                  <p style="font-size: var(--font-sm);">I thrive in communities. Building them, showing up for them, and learning from the people around me.</p>
-                </div>
-                <div style="background: var(--mint); padding: var(--spacing-md); border-radius: var(--radius-md);">
-                  <h4 style="margin-bottom: var(--spacing-xs);">Adventure</h4>
-                  <p style="font-size: var(--font-sm);">From paragliding to pottery class, I believe in saying yes to things that scare you a little.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Beyond Work -->
-            <div class="about-bio__section">
-              <h2 class="about-bio__heading">Beyond Work</h2>
-              <p>
-                When I'm not in class or crunching numbers, you'll find me on the tennis court, trying a new recipe, shaping something on a pottery wheel, or planning my next trip. I sing acapella pop renditions for fun, I'm a beginner golfer who loses a lot of balls, and I have strong opinions about EDM festival logistics.
-              </p>
-              <p class="mt-md">
-                Want to know more? <a href="hobbies.html" style="font-weight: var(--font-semibold);">Check out my hobbies page!</a>
-              </p>
-            </div>
-
-            <!-- Call to Action -->
-            <div class="about-bio__section text-center" style="background: linear-gradient(135deg, var(--primary-light), var(--secondary-light)); padding: var(--spacing-xl); border-radius: var(--radius-lg);">
-              <h2 style="margin-bottom: var(--spacing-md);">Let's Connect!</h2>
-              <p style="font-size: var(--font-lg); margin-bottom: var(--spacing-lg);">
-                I'm always happy to chat — whether it's about a project, an idea, or just to say hi.
-              </p>
-              <div style="display: flex; gap: var(--spacing-sm); justify-content: center; flex-wrap: wrap;">
-                <a href="projects.html" class="btn btn--primary">View My Projects</a>
-                <a href="blog.html" class="btn btn--secondary">Read My Blog</a>
-              </div>
-            </div>
-
+        <div class="grid-2" style="margin-top: var(--space-4);">
+          <div class="drive-card reveal">
+            <h3>🔍 Curiosity</h3>
+            <p>I've never stayed in one lane — the best ideas come from connecting dots across fields.</p>
           </div>
+          <div class="drive-card reveal" data-delay="1">
+            <h3>💛 Impact</h3>
+            <p>From mentoring new grads to building AI tools for pension funds — I want my work to make things better for real people.</p>
+          </div>
+          <div class="drive-card reveal" data-delay="1">
+            <h3>🤝 Community</h3>
+            <p>Building communities, showing up for them, and learning from the people around me.</p>
+          </div>
+          <div class="drive-card reveal" data-delay="2">
+            <h3>🪂 Adventure</h3>
+            <p>From paragliding to pottery class — say yes to the things that scare you a little.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- ===================== BEYOND WORK ===================== -->
+    <section class="section--tight">
+      <div class="container container--narrow center">
+        <span class="section-kicker reveal">after hours</span>
+        <p class="section-lede reveal" style="margin-inline: auto;">
+          When I'm not in class or crunching numbers, I'm on the tennis court, at the pottery wheel,
+          trying a new recipe, or planning the next trip. I sing acapella pop covers, lose golf balls
+          at an impressive rate, and hold strong opinions about EDM festival logistics.
+        </p>
+        <div class="reveal" style="margin-top: var(--space-3);">
+          <a href="hobbies.html" class="btn btn--fill">Tour my hobbies →</a>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer -->
+  <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
-    <div class="footer__content">
-      <p class="footer__text">
-        Made with care by Jane Wang
+    <div class="container">
+      <span class="section-kicker">this could be the start of something</span>
+      <h2 class="footer__title">Let's be <em>friends</em></h2>
+      <p class="footer__blurb">
+        Always happy to chat — about a project, an idea, tennis, or where to find the best dumplings in Philly.
       </p>
       <div class="footer__links">
-        <a href="https://linkedin.com/in/janelianwang/" class="footer__link">LinkedIn</a>
-        <a href="mailto:jane2027@wharton.upenn.edu" class="footer__link">Email</a>
+        <a href="mailto:jane2027@wharton.upenn.edu" class="btn btn--fill">Email me 💌</a>
+        <a href="https://linkedin.com/in/janelianwang/" class="btn">LinkedIn ↗</a>
       </div>
-      <p class="footer__text text-light mt-sm">
-        &copy; 2026 Jane Wang. All rights reserved.
-      </p>
+      <p class="footer__fine">© 2026 Jane Wang · handmade with <span class="hand">a lot of</span> sticky notes</p>
     </div>
   </footer>
 
-  <!-- JavaScript Files -->
   <script src="js/main.js"></script>
-  <script src="js/components.js"></script>
+  <script src="js/map.js"></script>
 
 </body>
 </html>

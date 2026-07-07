@@ -3,183 +3,162 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Jane Wang's projects — tools and experiments I've been building">
-  <title>Projects | Jane Wang</title>
+  <meta name="description" content="Projects by Jane Wang — small tools and experiments, built for fun and for real problems.">
+  <title>Projects — Jane Wang</title>
 
-  <!-- CSS Files -->
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages.css">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✿</text></svg>">
 </head>
-<body>
+<body class="theme-lilac">
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="navbar__container">
-      <a href="index.html" class="navbar__brand">Jane Wang</a>
+  <!-- ===================== NAV ===================== -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__brand">jane <em>wang</em></a>
 
-      <div class="navbar__nav">
-        <a href="index.html" class="navbar__link">Home</a>
-        <a href="about.html" class="navbar__link">About</a>
-        <a href="hobbies.html" class="navbar__link">Hobbies</a>
-        <a href="blog.html" class="navbar__link">Blog</a>
-        <a href="projects.html" class="navbar__link">Projects</a>
+      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+      <div class="nav__links">
+        <a href="about.html" class="nav__link">About</a>
+        <a href="hobbies.html" class="nav__link">Hobbies</a>
+        <a href="projects.html" class="nav__link">Projects</a>
+        <a href="blog.html" class="nav__link">Blog</a>
+        <a href="mailto:jane2027@wharton.upenn.edu" class="btn btn--fill btn--sm nav__cta">Say hi ✿</a>
       </div>
-
-      <button class="navbar__toggle" aria-label="Toggle navigation" aria-expanded="false">
-        ☰
-      </button>
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <main class="page-content">
+  <main>
 
-    <!-- Projects Header -->
-    <section class="section section--sm">
+    <!-- ===================== PAGE HERO ===================== -->
+    <header class="page-hero">
       <div class="container">
-        <div class="projects-header">
-          <h1 class="projects-header__title">My Projects</h1>
-          <p class="projects-header__subtitle">
-            A few tools and experiments I've been tinkering with
-          </p>
-        </div>
+        <span class="section-kicker">tinkering, professionally</span>
+        <h1 class="page-hero__title">Things I've <em>built</em></h1>
+        <p class="section-lede">
+          Small tools and experiments — some solve real problems, some exist purely because
+          building them made me happy.
+        </p>
       </div>
-    </section>
+    </header>
 
-    <!-- All Projects -->
-    <section class="section">
+    <!-- ===================== PROJECT GRID =====================
+         🧩 MODULAR: each project is one self-contained <article> block.
+         To ADD a project → copy any block below and edit the text.
+         To REMOVE one   → delete the whole block. The grid reflows itself.
+    ========================================================== -->
+    <section class="section--tight">
       <div class="container">
+        <div class="grid-3">
 
-        <div class="grid grid--3">
-
-          <!-- Project 1: Color Palette Generator -->
-          <div class="card project-card">
-            <div class="project-card__header">
-              <div>
-                <div class="card__image" style="background: linear-gradient(135deg, #B5FFD9, #FFD9B5); display: flex; align-items: center; justify-content: center; font-size: 3rem; margin-bottom: var(--spacing-md);">
-                  🌈
-                </div>
-                <h3 class="card__title">Color Palette Generator</h3>
-              </div>
-              <span class="project-card__status project-card__status--completed">Completed</span>
+          <!-- ── PROJECT: Color Palette Generator ── -->
+          <article class="card card--hover post-card reveal">
+            <div class="project-card__thumb" style="background: linear-gradient(135deg, var(--accent-faint), var(--bg-deep));">🌈</div>
+            <div class="project-card__head">
+              <h3 class="card__title">Color Palette Generator</h3>
+              <span class="status status--done">shipped!</span>
             </div>
-
-            <p class="card__description">
-              An interactive tool for generating beautiful, accessible color palettes. Features color theory algorithms, accessibility checking, and export functionality. Great for designers and developers.
+            <p class="post-card__excerpt">
+              An interactive tool for generating beautiful, accessible color palettes — color
+              theory algorithms, contrast checking, and one-click export.
             </p>
-
-            <div class="project-card__tech">
+            <div class="tag-row" style="margin-bottom: var(--space-3);">
               <span class="tag">JavaScript</span>
               <span class="tag">Design</span>
-              <span class="tag">Accessibility</span>
+              <span class="tag">A11y</span>
             </div>
-
-            <div class="project-card__links">
-              <a href="#" class="btn btn--sm btn--primary">Launch</a>
-              <a href="#" class="btn btn--sm btn--outline">Source</a>
+            <div style="display: flex; gap: var(--space-1);">
+              <a href="#" class="btn btn--sm btn--fill">Launch</a>
+              <a href="#" class="btn btn--sm">Source</a>
             </div>
-          </div>
+          </article>
+          <!-- ── end project ── -->
 
-          <!-- Project 2: Habit Tracker -->
-          <div class="card project-card">
-            <div class="project-card__header">
-              <div>
-                <div class="card__image" style="background: linear-gradient(135deg, #B5E8FF, #FFB3D9); display: flex; align-items: center; justify-content: center; font-size: 3rem; margin-bottom: var(--spacing-md);">
-                  🎯
-                </div>
-                <h3 class="card__title">Habit Tracker</h3>
-              </div>
-              <span class="project-card__status project-card__status--in-progress">In Progress</span>
+          <!-- ── PROJECT: Habit Tracker ── -->
+          <article class="card card--hover post-card reveal" data-delay="1">
+            <div class="project-card__thumb" style="background: linear-gradient(135deg, var(--accent-faint), var(--accent-soft));">🎯</div>
+            <div class="project-card__head">
+              <h3 class="card__title">Habit Tracker</h3>
+              <span class="status status--wip">in the oven</span>
             </div>
-
-            <p class="card__description">
-              A visual habit tracking app with streaks, insights, and motivational features. Exploring gamification patterns and habit formation psychology. Making progress tracking fun and engaging!
+            <p class="post-card__excerpt">
+              A visual habit tracker with streaks and gentle nudges — exploring gamification
+              and the psychology of habit formation.
             </p>
-
-            <div class="project-card__tech">
+            <div class="tag-row" style="margin-bottom: var(--space-3);">
               <span class="tag">React</span>
-              <span class="tag">Data Persistence</span>
-              <span class="tag">UX Design</span>
+              <span class="tag">UX</span>
+              <span class="tag">Psychology</span>
             </div>
-
-            <div class="project-card__links">
-              <a href="#" class="btn btn--sm btn--outline" style="opacity: 0.6;">In Development</a>
+            <div style="display: flex; gap: var(--space-1);">
+              <span class="hand" style="font-size: 1.2rem;">check back soon →</span>
             </div>
-          </div>
+          </article>
+          <!-- ── end project ── -->
 
-          <!-- Project 3: Playlist Curator -->
-          <div class="card project-card">
-            <div class="project-card__header">
-              <div>
-                <div class="card__image" style="background: linear-gradient(135deg, #FFD9EC, #D4B5FF); display: flex; align-items: center; justify-content: center; font-size: 3rem; margin-bottom: var(--spacing-md);">
-                  🎵
-                </div>
-                <h3 class="card__title">Playlist Curator</h3>
-              </div>
-              <span class="project-card__status project-card__status--planned">Planned</span>
+          <!-- ── PROJECT: Playlist Curator ── -->
+          <article class="card card--hover post-card reveal" data-delay="2">
+            <div class="project-card__thumb" style="background: linear-gradient(135deg, var(--accent-soft), var(--bg-deep));">🎧</div>
+            <div class="project-card__head">
+              <h3 class="card__title">Playlist Curator</h3>
+              <span class="status status--idea">sketching</span>
             </div>
-
-            <p class="card__description">
-              A smart playlist generator that creates mood-based playlists using music APIs. Planning to incorporate machine learning for better recommendations. Music + code = the dream.
+            <p class="post-card__excerpt">
+              A mood-based playlist generator built on music APIs — because music + code is
+              the dream combination.
             </p>
-
-            <div class="project-card__tech">
-              <span class="tag">API Integration</span>
+            <div class="tag-row" style="margin-bottom: var(--space-3);">
+              <span class="tag">APIs</span>
               <span class="tag">Music</span>
-              <span class="tag">Algorithms</span>
+              <span class="tag">ML</span>
             </div>
-
-            <div class="project-card__links">
-              <a href="#" class="btn btn--sm btn--outline" style="opacity: 0.6;">Planned</a>
+            <div style="display: flex; gap: var(--space-1);">
+              <span class="hand" style="font-size: 1.2rem;">still a napkin sketch ✏️</span>
             </div>
-          </div>
+          </article>
+          <!-- ── end project ── -->
 
         </div>
-
       </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="section section--sm">
-      <div class="container container--narrow">
-        <div class="text-center" style="background: linear-gradient(135deg, var(--primary-light), var(--accent-light)); padding: var(--spacing-xl); border-radius: var(--radius-xl); box-shadow: var(--shadow-md);">
-          <h2 style="margin-bottom: var(--spacing-md);">More coming soon!</h2>
-          <p style="font-size: var(--font-lg); color: var(--text-secondary); margin-bottom: var(--spacing-lg);">
-            I'm always building something new. Check back for updates or reach out if you have an idea to collaborate on.
-          </p>
-          <div style="display: flex; gap: var(--spacing-sm); justify-content: center; flex-wrap: wrap;">
-            <a href="about.html" class="btn btn--primary">Get in Touch</a>
-            <a href="blog.html" class="btn btn--secondary">Read My Blog</a>
-          </div>
+    <!-- ===================== CTA ===================== -->
+    <section class="section">
+      <div class="container container--narrow center">
+        <span class="section-kicker reveal">always cooking something</span>
+        <h2 class="section-title reveal" style="font-size: var(--text-2xl);">More on the <span class="hl">workbench</span></h2>
+        <p class="section-lede reveal" style="margin-inline: auto; margin-bottom: var(--space-3);">
+          I'm always building something new. Check back for updates — or reach out if
+          you have an idea worth collaborating on.
+        </p>
+        <div class="reveal">
+          <a href="mailto:jane2027@wharton.upenn.edu" class="btn btn--fill">Pitch me an idea 💡</a>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer -->
+  <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
-    <div class="footer__content">
-      <p class="footer__text">
-        Made with care by Jane Wang
+    <div class="container">
+      <span class="section-kicker">this could be the start of something</span>
+      <h2 class="footer__title">Let's be <em>friends</em></h2>
+      <p class="footer__blurb">
+        Always happy to chat — about a project, an idea, tennis, or where to find the best dumplings in Philly.
       </p>
       <div class="footer__links">
-        <a href="https://linkedin.com/in/janelianwang/" class="footer__link">LinkedIn</a>
-        <a href="mailto:jane2027@wharton.upenn.edu" class="footer__link">Email</a>
+        <a href="mailto:jane2027@wharton.upenn.edu" class="btn btn--fill">Email me 💌</a>
+        <a href="https://linkedin.com/in/janelianwang/" class="btn">LinkedIn ↗</a>
       </div>
-      <p class="footer__text text-light mt-sm">
-        &copy; 2026 Jane Wang. All rights reserved.
-      </p>
+      <p class="footer__fine">© 2026 Jane Wang · handmade with <span class="hand">a lot of</span> sticky notes</p>
     </div>
   </footer>
 
-  <!-- JavaScript Files -->
   <script src="js/main.js"></script>
-  <script src="js/components.js"></script>
 
 </body>
 </html>

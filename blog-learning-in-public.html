@@ -3,267 +3,216 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Why sharing your learning journey publicly is one of the most effective ways to grow">
-  <title>Learning in Public | Blog</title>
+  <meta name="description" content="Learning in public — why sharing your learning journey is one of the most effective ways to grow, by Jane Wang.">
+  <title>Learning in Public — Jane Wang</title>
 
-  <!-- CSS Files -->
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages.css">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✿</text></svg>">
 </head>
-<body>
+<body class="theme-lemon">
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="navbar__container">
-      <a href="index.html" class="navbar__brand">Jane Wang</a>
+  <!-- ===================== NAV ===================== -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__brand">jane <em>wang</em></a>
 
-      <div class="navbar__nav">
-        <a href="index.html" class="navbar__link">Home</a>
-        <a href="about.html" class="navbar__link">About</a>
-        <a href="hobbies.html" class="navbar__link">Hobbies</a>
-        <a href="blog.html" class="navbar__link">Blog</a>
-        <a href="projects.html" class="navbar__link">Projects</a>
+      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+      <div class="nav__links">
+        <a href="about.html" class="nav__link">About</a>
+        <a href="hobbies.html" class="nav__link">Hobbies</a>
+        <a href="projects.html" class="nav__link">Projects</a>
+        <a href="blog.html" class="nav__link">Blog</a>
+        <a href="mailto:jane2027@wharton.upenn.edu" class="btn btn--fill btn--sm nav__cta">Say hi ✿</a>
       </div>
-
-      <button class="navbar__toggle" aria-label="Toggle navigation" aria-expanded="false">
-        ☰
-      </button>
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <main class="page-content">
-
-    <!-- Back Button -->
-    <section class="section section--sm">
-      <div class="container container--narrow">
-        <a href="blog.html" style="display: inline-flex; align-items: center; gap: var(--spacing-xs); color: var(--text-secondary); font-weight: var(--font-medium); margin-bottom: var(--spacing-lg);">
-          ← Back to Blog
-        </a>
-      </div>
-    </section>
-
-    <!-- Article Header -->
+  <main>
     <article>
-      <header class="section section--sm" style="padding-top: 0;">
+
+      <!-- ===================== ARTICLE HEAD ===================== -->
+      <header class="article-head">
         <div class="container container--narrow">
-          <div class="blog-card__tags mb-md">
-            <span class="tag tag--accent">Learning</span>
-            <span class="tag">Personal Growth</span>
-          </div>
+          <a href="blog.html" class="article-back">← back to field notes</a>
 
-          <h1 style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: var(--spacing-md); line-height: 1.2;">
-            Learning in Public
-          </h1>
+          <h1 class="article-head__title">Learning in <em class="display-italic" style="color: var(--accent);">Public</em></h1>
 
-          <div class="card__meta" style="font-size: var(--font-md); margin-bottom: var(--spacing-xl);">
-            <span class="blog-card__date">January 5, 2026</span>
-            <span>•</span>
+          <div class="card__meta" style="margin-bottom: var(--space-4);">
+            <span>Jan 5, 2026</span>
+            <span>·</span>
             <span>6 min read</span>
-            <span>•</span>
-            <span>By Jane Wang</span>
+            <span>·</span>
+            <span>by Jane Wang</span>
           </div>
 
-          <div style="height: 300px; background: linear-gradient(135deg, var(--accent-light), var(--secondary-light)); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; font-size: 6rem; margin-bottom: var(--spacing-xl);">
+          <div class="article-banner" style="background: linear-gradient(135deg, var(--bg-deep), var(--accent-soft));">
             📖
           </div>
         </div>
       </header>
 
-      <!-- Article Body -->
-      <div class="section" style="padding-top: 0;">
-        <div class="container container--narrow">
-          <div style="font-size: var(--font-lg); line-height: var(--line-height-relaxed); color: var(--text-primary);">
+      <!-- ===================== ARTICLE BODY ===================== -->
+      <div class="container container--narrow article-body" style="padding-bottom: var(--space-5);">
 
-            <p style="font-size: var(--font-xl); font-weight: var(--font-medium); color: var(--text-primary); margin-bottom: var(--spacing-lg);">
-              There's something terrifying about pressing "publish" on something you've just learned. What if you're wrong? What if someone more experienced calls you out? What if it's obvious to everyone else?
-            </p>
+        <p style="font-size: var(--text-xl); color: var(--ink); font-weight: 500;">
+          There's something terrifying about pressing "publish" on something you've just learned. What if you're wrong? What if someone more experienced calls you out? What if it's obvious to everyone else?
+        </p>
 
-            <p>
-              Despite these fears, I've decided to embrace learning in public—sharing my journey, my mistakes, and my discoveries as they happen. Here's why.
-            </p>
+        <p>
+          Despite these fears, I've decided to embrace learning in public—sharing my journey, my mistakes, and my discoveries as they happen. Here's why.
+        </p>
 
-            <h2 style="margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">The Traditional Learning Model is Broken</h2>
+        <h2>The Traditional Learning Model is Broken</h2>
 
-            <p>
-              We're taught to learn in private, master a skill, and only then share our expertise. This model made sense in a slower world, but it doesn't reflect how learning actually works in 2026.
-            </p>
+        <p>
+          We're taught to learn in private, master a skill, and only then share our expertise. This model made sense in a slower world, but it doesn't reflect how learning actually works in 2026.
+        </p>
 
-            <p>
-              Learning isn't linear. It's messy, recursive, full of dead ends and sudden breakthroughs. By waiting until we're "experts" to share, we miss out on the most valuable part of the journey—the struggle, the questions, the incremental progress.
-            </p>
+        <p>
+          Learning isn't linear. It's messy, recursive, full of dead ends and sudden breakthroughs. By waiting until we're "experts" to share, we miss out on the most valuable part of the journey—the struggle, the questions, the incremental progress.
+        </p>
 
-            <h2 style="margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">Why Learn in Public?</h2>
+        <h2>Why Learn in Public?</h2>
 
-            <h3 style="margin-top: var(--spacing-lg); margin-bottom: var(--spacing-sm); font-size: var(--font-xl);">1. It Accelerates Your Learning</h3>
+        <h3>1. It Accelerates Your Learning</h3>
 
-            <p>
-              When you know you're going to explain something publicly, you learn it more deeply. You can't gloss over the details or fool yourself into thinking you understand something you don't. Teaching forces clarity.
-            </p>
+        <p>
+          When you know you're going to explain something publicly, you learn it more deeply. You can't gloss over the details or fool yourself into thinking you understand something you don't. Teaching forces clarity.
+        </p>
 
-            <p>
-              Plus, sharing your work invites feedback. Someone might point out a better approach, a common pitfall, or a resource you didn't know existed. This feedback loop is invaluable.
-            </p>
+        <p>
+          Plus, sharing your work invites feedback. Someone might point out a better approach, a common pitfall, or a resource you didn't know existed. This feedback loop is invaluable.
+        </p>
 
-            <h3 style="margin-top: var(--spacing-lg); margin-bottom: var(--spacing-sm); font-size: var(--font-xl);">2. It Builds Your Network</h3>
+        <h3>2. It Builds Your Network</h3>
 
-            <p>
-              Learning in public attracts like-minded people. When you share your journey, you find others on similar paths. Some are ahead of you and can offer guidance. Others are behind and benefit from your insights. Both connections are valuable.
-            </p>
+        <p>
+          Learning in public attracts like-minded people. When you share your journey, you find others on similar paths. Some are ahead of you and can offer guidance. Others are behind and benefit from your insights. Both connections are valuable.
+        </p>
 
-            <p>
-              I've connected with more interesting people through sharing my learning than through any other activity. These aren't just professional contacts—they're genuine relationships built on mutual growth.
-            </p>
+        <p>
+          I've connected with more interesting people through sharing my learning than through any other activity. These aren't just professional contacts—they're genuine relationships built on mutual growth.
+        </p>
 
-            <h3 style="margin-top: var(--spacing-lg); margin-bottom: var(--spacing-sm); font-size: var(--font-xl);">3. It Creates a Personal Knowledge Base</h3>
+        <h3>3. It Creates a Personal Knowledge Base</h3>
 
-            <p>
-              Your public learning becomes a resource for your future self. How many times have you solved a problem, only to encounter it again months later and not remember the solution? When you document your learning publicly, you're creating a searchable archive of your growth.
-            </p>
+        <p>
+          Your public learning becomes a resource for your future self. How many times have you solved a problem, only to encounter it again months later and not remember the solution? When you document your learning publicly, you're creating a searchable archive of your growth.
+        </p>
 
-            <h3 style="margin-top: var(--spacing-lg); margin-bottom: var(--spacing-sm); font-size: var(--font-xl);">4. It Helps Others</h3>
+        <h3>4. It Helps Others</h3>
 
-            <p>
-              This might sound presumptuous, but hear me out: your beginner's perspective is valuable. When you're learning something new, you remember what confused you, what clicked, what resources helped. Experts often forget what it's like to be a beginner.
-            </p>
+        <p>
+          This might sound presumptuous, but hear me out: your beginner's perspective is valuable. When you're learning something new, you remember what confused you, what clicked, what resources helped. Experts often forget what it's like to be a beginner.
+        </p>
 
-            <p>
-              Your struggle might be exactly what someone else needs to see to keep going.
-            </p>
+        <p>
+          Your struggle might be exactly what someone else needs to see to keep going.
+        </p>
 
-            <h2 style="margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">Overcoming the Fear</h2>
+        <h2>Overcoming the Fear</h2>
 
-            <p>
-              Let's address the elephant in the room: imposter syndrome. The fear that you're not qualified, that you'll be exposed as a fraud, that you have nothing valuable to contribute.
-            </p>
+        <p>
+          Let's address the elephant in the room: imposter syndrome. The fear that you're not qualified, that you'll be exposed as a fraud, that you have nothing valuable to contribute.
+        </p>
 
-            <p>
-              Here's what I've learned: everyone feels this way. Even experts. The difference is that people who learn in public have learned to share despite the fear, not in the absence of it.
-            </p>
+        <p>
+          Here's what I've learned: everyone feels this way. Even experts. The difference is that people who learn in public have learned to share despite the fear, not in the absence of it.
+        </p>
 
-            <p>
-              A few mindset shifts that helped me:
-            </p>
+        <p>
+          A few mindset shifts that helped me:
+        </p>
 
-            <ul style="margin-left: var(--spacing-xl); margin-bottom: var(--spacing-md); line-height: var(--line-height-relaxed);">
-              <li><strong>You don't need to be an expert to share:</strong> You just need to be one step ahead of someone else.</li>
-              <li><strong>Being wrong is part of the process:</strong> If someone corrects you, that's a gift, not an attack.</li>
-              <li><strong>Progress over perfection:</strong> A messy post that helps one person is better than a perfect post that never gets published.</li>
-              <li><strong>Your perspective is unique:</strong> Even if the topic has been covered before, it hasn't been covered by <em>you</em>, with your experiences and insights.</li>
-            </ul>
+        <ul>
+          <li><strong>You don't need to be an expert to share:</strong> You just need to be one step ahead of someone else.</li>
+          <li><strong>Being wrong is part of the process:</strong> If someone corrects you, that's a gift, not an attack.</li>
+          <li><strong>Progress over perfection:</strong> A messy post that helps one person is better than a perfect post that never gets published.</li>
+          <li><strong>Your perspective is unique:</strong> Even if the topic has been covered before, it hasn't been covered by <em>you</em>, with your experiences and insights.</li>
+        </ul>
 
-            <h2 style="margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">How to Start</h2>
+        <h2>How to Start</h2>
 
-            <p>
-              You don't need a blog, a YouTube channel, or a big following to learn in public. Start small:
-            </p>
+        <p>
+          You don't need a blog, a YouTube channel, or a big following to learn in public. Start small:
+        </p>
 
-            <ul style="margin-left: var(--spacing-xl); margin-bottom: var(--spacing-md); line-height: var(--line-height-relaxed);">
-              <li>Tweet about what you learned today</li>
-              <li>Write a README for a project explaining your approach</li>
-              <li>Answer questions on forums or Stack Overflow</li>
-              <li>Share a "TIL" (Today I Learned) on social media</li>
-              <li>Keep a public learning log</li>
-            </ul>
+        <ul>
+          <li>Tweet about what you learned today</li>
+          <li>Write a README for a project explaining your approach</li>
+          <li>Answer questions on forums or Stack Overflow</li>
+          <li>Share a "TIL" (Today I Learned) on social media</li>
+          <li>Keep a public learning log</li>
+        </ul>
 
-            <p>
-              The medium doesn't matter. What matters is the act of sharing, of being vulnerable, of contributing to the collective knowledge.
-            </p>
+        <p>
+          The medium doesn't matter. What matters is the act of sharing, of being vulnerable, of contributing to the collective knowledge.
+        </p>
 
-            <h2 style="margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">What I've Learned So Far</h2>
+        <h2>What I've Learned So Far</h2>
 
-            <p>
-              I'm still early in my learning-in-public journey, but already I've noticed:
-            </p>
+        <p>
+          I'm still early in my learning-in-public journey, but already I've noticed:
+        </p>
 
-            <p>
-              <strong>People are kinder than you expect.</strong> The internet has a reputation for harshness, but in my experience, most people are supportive, especially when you're clearly trying to learn and grow.
-            </p>
+        <p>
+          <strong>People are kinder than you expect.</strong> The internet has a reputation for harshness, but in my experience, most people are supportive, especially when you're clearly trying to learn and grow.
+        </p>
 
-            <p>
-              <strong>You learn more than you think.</strong> It's easy to feel like you're not making progress, but when you document your journey, you can look back and see how far you've come.
-            </p>
+        <p>
+          <strong>You learn more than you think.</strong> It's easy to feel like you're not making progress, but when you document your journey, you can look back and see how far you've come.
+        </p>
 
-            <p>
-              <strong>The process matters more than the product.</strong> The act of sharing, reflecting, and engaging is where the real value lies, not in the number of likes or views you get.
-            </p>
+        <p>
+          <strong>The process matters more than the product.</strong> The act of sharing, reflecting, and engaging is where the real value lies, not in the number of likes or views you get.
+        </p>
 
-            <h2 style="margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">An Invitation</h2>
+        <h2>An Invitation</h2>
 
-            <p>
-              If you've been hesitating to share your learning journey, consider this your sign to start. Pick one thing you learned this week and share it somewhere—anywhere. See how it feels.
-            </p>
+        <p>
+          If you've been hesitating to share your learning journey, consider this your sign to start. Pick one thing you learned this week and share it somewhere—anywhere. See how it feels.
+        </p>
 
-            <p>
-              You might be surprised by what happens.
-            </p>
+        <p>
+          You might be surprised by what happens.
+        </p>
 
-            <div style="margin-top: var(--spacing-3xl); padding-top: var(--spacing-xl); border-top: 2px solid var(--gray);">
-              <p style="color: var(--text-secondary); font-style: italic;">
-                Are you learning in public? I'd love to follow your journey. Drop me a link to where you're sharing your learning!
-              </p>
-            </div>
+        <p style="border-top: 1.5px dashed var(--ink-faint); padding-top: var(--space-3); font-style: italic;">
+          Are you learning in public? I'd love to follow your journey — send me a link to where you're sharing it!
+        </p>
 
-          </div>
+        <span class="article-sign">— jane ✿</span>
+
+        <div style="margin-top: var(--space-5); display: flex; gap: var(--space-2); flex-wrap: wrap;">
+          <a href="blog.html" class="btn">← All notes</a>
+          <a href="blog-balance.html" class="btn btn--fill">Next: Finding Balance →</a>
         </div>
       </div>
-
-      <!-- Related Posts -->
-      <section class="section" style="background-color: var(--off-white);">
-        <div class="container container--narrow">
-          <h2 style="margin-bottom: var(--spacing-lg);">Related Posts</h2>
-
-          <div class="grid" style="gap: var(--spacing-md);">
-            <div class="card">
-              <h3 class="card__title">Reflections on Creativity in Code</h3>
-              <p class="card__description">
-                Programming is often seen as purely logical, but there's an incredible amount of creativity involved.
-              </p>
-              <a href="blog-creativity-in-code.html" class="blog-card__read-more">Read more</a>
-            </div>
-
-            <div class="card">
-              <h3 class="card__title">The Art of Finding Balance</h3>
-              <p class="card__description">
-                In our always-on world, finding balance feels like dancing with chaos. Here's what I've learned.
-              </p>
-              <a href="blog-balance.html" class="blog-card__read-more">Read more</a>
-            </div>
-          </div>
-
-          <div class="text-center mt-xl">
-            <a href="blog.html" class="btn btn--outline">View All Posts</a>
-          </div>
-        </div>
-      </section>
 
     </article>
-
   </main>
 
-  <!-- Footer -->
+  <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
-    <div class="footer__content">
-      <p class="footer__text">
-        Made with care by Jane Wang
+    <div class="container">
+      <span class="section-kicker">this could be the start of something</span>
+      <h2 class="footer__title">Let's be <em>friends</em></h2>
+      <p class="footer__blurb">
+        Always happy to chat — about a project, an idea, tennis, or where to find the best dumplings in Philly.
       </p>
       <div class="footer__links">
-        <a href="https://linkedin.com/in/janelianwang/" class="footer__link">LinkedIn</a>
-        <a href="mailto:jane2027@wharton.upenn.edu" class="footer__link">Email</a>
+        <a href="mailto:jane2027@wharton.upenn.edu" class="btn btn--fill">Email me 💌</a>
+        <a href="https://linkedin.com/in/janelianwang/" class="btn">LinkedIn ↗</a>
       </div>
-      <p class="footer__text text-light mt-sm">
-        &copy; 2026 Jane Wang. All rights reserved.
-      </p>
+      <p class="footer__fine">© 2026 Jane Wang · handmade with <span class="hand">a lot of</span> sticky notes</p>
     </div>
   </footer>
 
-  <!-- JavaScript Files -->
   <script src="js/main.js"></script>
-  <script src="js/components.js"></script>
 
 </body>
 </html>

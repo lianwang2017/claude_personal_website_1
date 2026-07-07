@@ -1,31 +1,49 @@
 /**
- * CAROUSEL.JS - Identity Carousel
- * ================================
- * Rotates through images and text on the homepage hero.
+ * carousel.js — polaroid photo carousel on the homepage hero.
+ * Cycles through the illustrated "Janes" with handwritten captions.
+ * Pauses while hovered; dots allow manual navigation.
  */
 
 (function () {
-  const images = document.querySelectorAll('.carousel__image');
-  const texts = document.querySelectorAll('.carousel__text');
+  const frame = document.querySelector('.polaroid__frame');
+  if (!frame) return;
 
-  if (!images.length || !texts.length) return;
+  const images = frame.querySelectorAll('img');
+  const caption = document.querySelector('.polaroid__caption');
+  const dotsWrap = document.querySelector('.polaroid__dots');
+  if (!images.length) return;
 
+  const INTERVAL = 3600;
   let current = 0;
-  const total = images.length;
-  const INTERVAL = 5000; // 5 seconds per slide
+  let paused = false;
 
-  function next() {
-    // Remove active class from current
-    images[current].classList.remove('carousel__image--active');
-    texts[current].classList.remove('carousel__text--active');
+  // Build one dot per image
+  const dots = [...images].map((_, i) => {
+    const dot = document.createElement('button');
+    dot.setAttribute('aria-label', `Show photo ${i + 1}`);
+    dot.addEventListener('click', () => show(i));
+    dotsWrap.appendChild(dot);
+    return dot;
+  });
 
-    // Advance index
-    current = (current + 1) % total;
-
-    // Add active class to next
-    images[current].classList.add('carousel__image--active');
-    texts[current].classList.add('carousel__text--active');
+  function show(i) {
+    images[current].classList.remove('is-active');
+    dots[current].classList.remove('is-active');
+    current = i;
+    images[current].classList.add('is-active');
+    dots[current].classList.add('is-active');
+    if (caption) caption.textContent = images[current].dataset.caption || '';
   }
 
-  setInterval(next, INTERVAL);
+  show(0);
+
+  setInterval(() => {
+    if (!paused) show((current + 1) % images.length);
+  }, INTERVAL);
+
+  const stack = document.querySelector('.polaroid-stack');
+  if (stack) {
+    stack.addEventListener('mouseenter', () => (paused = true));
+    stack.addEventListener('mouseleave', () => (paused = false));
+  }
 })();

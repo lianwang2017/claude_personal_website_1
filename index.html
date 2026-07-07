@@ -3,114 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Jane Wang — engineer, MBA candidate, and lifelong explorer. Welcome to my corner of the internet.">
-  <title>Home | Jane Wang</title>
+  <meta name="description" content="Jane Wang — engineer turned Wharton MBA, builder of things, chaser of adventures. Welcome to my corner of the internet.">
+  <title>Jane Wang — engineer, MBA, explorer</title>
 
-  <!-- CSS Files -->
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages.css">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✿</text></svg>">
 </head>
-<body>
+<body class="theme-blush">
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="navbar__container">
-      <a href="index.html" class="navbar__brand">Jane Wang</a>
+  <!-- ===================== NAV ===================== -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__brand">jane <em>wang</em></a>
 
-      <div class="navbar__nav">
-        <a href="index.html" class="navbar__link">Home</a>
-        <a href="about.html" class="navbar__link">About</a>
-        <a href="hobbies.html" class="navbar__link">Hobbies</a>
-        <a href="blog.html" class="navbar__link">Blog</a>
-        <a href="projects.html" class="navbar__link">Projects</a>
+      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+      <div class="nav__links">
+        <a href="about.html" class="nav__link">About</a>
+        <a href="hobbies.html" class="nav__link">Hobbies</a>
+        <a href="projects.html" class="nav__link">Projects</a>
+        <a href="blog.html" class="nav__link">Blog</a>
+        <a href="mailto:jane2027@wharton.upenn.edu" class="btn btn--fill btn--sm nav__cta">Say hi ✿</a>
       </div>
-
-      <button class="navbar__toggle" aria-label="Toggle navigation" aria-expanded="false">
-        ☰
-      </button>
     </div>
   </nav>
 
-  <!-- Main Content -->
   <main>
-    <!-- Hero Section with Carousel -->
-    <section class="hero home-hero" style="min-height: 85vh; background: linear-gradient(135deg, var(--off-white) 0%, var(--light-gray) 100%);">
-      <div class="hero__content" style="max-width: 900px;">
-        <p style="font-size: clamp(2rem, 5vw, 3.5rem); color: var(--primary); font-weight: var(--font-bold); margin-bottom: var(--spacing-md);">
-          Hi, I'm Jane Wang
-        </p>
 
-        <!-- Carousel Container -->
-        <div class="carousel" aria-label="Identity carousel">
-          <div class="carousel__image-wrapper">
-            <img src="images/professional_jane.png" alt="Jane Wang - Professional" class="carousel__image carousel__image--active" />
-            <img src="images/coding_jane.png" alt="Jane Wang - Coding" class="carousel__image" />
-            <img src="images/tennis_jane.png" alt="Jane Wang - Playing Tennis" class="carousel__image" />
-            <img src="images/cooking_jane.png" alt="Jane Wang - Cooking" class="carousel__image" />
-            <img src="images/pottery_jane.png" alt="Jane Wang - Pottery" class="carousel__image" />
-            <img src="images/travel_jane.png" alt="Jane Wang - Traveling" class="carousel__image" />
-            <img src="images/paragliding_jane.png" alt="Jane Wang - Paragliding" class="carousel__image" />
+    <!-- ===================== HERO ===================== -->
+    <header class="hero">
+      <div class="container hero__inner">
+        <div>
+          <span class="hero__hello">hi hi, you found me! ☀️</span>
+          <h1 class="hero__title">I'm <em>Jane</em> — I build things &amp; chase adventures.</h1>
+
+          <p class="hero__rotator">
+            currently:
+            <span class="rotator" data-phrases='["getting my MBA at Wharton 🎓","perfecting my topspin 🎾","building little AI tools 🤖","centering clay (and myself) 🏺","hunting for flight deals ✈️","burning garlic on purpose 🍳"]'>getting my MBA at Wharton 🎓</span>
+          </p>
+
+          <p class="hero__blurb">
+            Engineer at Google, then off to Wharton for the MBA — with tennis rackets, pottery
+            wheels, and boarding passes collected along the way. I like hard problems,
+            warm people, and saying yes to things that scare me a little.
+          </p>
+
+          <div class="hero__cta">
+            <a href="about.html" class="btn btn--fill">My story →</a>
+            <a href="projects.html" class="btn">See what I've built</a>
           </div>
-
-          <h1 class="hero__title carousel__title" style="font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin-bottom: var(--spacing-lg); line-height: 1.2; white-space: nowrap;">
-            <span class="carousel__text carousel__text--active">Engineer. MBA. Explorer.</span>
-            <span class="carousel__text">Building things with code.</span>
-            <span class="carousel__text">Chasing every ball on the court.</span>
-            <span class="carousel__text">Experimenting in the kitchen.</span>
-            <span class="carousel__text">Getting my hands dirty with clay.</span>
-            <span class="carousel__text">Discovering the world, one trip at a time.</span>
-            <span class="carousel__text">Always chasing the next adventure.</span>
-          </h1>
         </div>
 
-        <p class="hero__subtitle" style="font-size: var(--font-xl); max-width: 600px; margin: 0 auto var(--spacing-xl); color: var(--text-secondary);">
-          From writing code at Google to pursuing my MBA at Wharton, I'm driven by curiosity and a love for building things that matter. Welcome to my corner of the internet.
-        </p>
-        <div class="hero__cta" style="display: flex; gap: var(--spacing-md); justify-content: center; flex-wrap: wrap;">
-          <a href="projects.html" class="btn btn--primary btn--lg">View My Work</a>
-          <a href="about.html" class="btn btn--outline btn--lg">More About Me</a>
+        <!-- Polaroid carousel — captions live in data-caption on each img -->
+        <div class="polaroid-stack">
+          <span class="hero__note">↓ that's me!!</span>
+          <figure class="polaroid">
+            <div class="polaroid__frame">
+              <img src="images/professional_jane.png" alt="Illustration of Jane in business attire" data-caption="boardroom Jane" class="is-active">
+              <img src="images/coding_jane.png" alt="Illustration of Jane coding at her desk" data-caption="ship-it Jane">
+              <img src="images/tennis_jane.png" alt="Illustration of Jane playing tennis" data-caption="topspin Jane">
+              <img src="images/cooking_jane.png" alt="Illustration of Jane cooking" data-caption="head-chef Jane">
+              <img src="images/pottery_jane.png" alt="Illustration of Jane at a pottery wheel" data-caption="mud-splattered Jane">
+              <img src="images/travel_jane.png" alt="Illustration of Jane traveling" data-caption="window-seat Jane">
+              <img src="images/paragliding_jane.png" alt="Illustration of Jane paragliding" data-caption="zero-fear Jane">
+            </div>
+            <figcaption class="polaroid__caption">boardroom Jane</figcaption>
+            <div class="polaroid__dots" role="tablist" aria-label="Choose photo"></div>
+          </figure>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== TICKER ===================== -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <!-- track is doubled so the loop is seamless -->
+        <span>tennis 🎾</span><span>pottery 🏺</span><span>dim sum hunts 🥟</span><span>EDM festivals 🎧</span><span>flight deals ✈️</span><span>acapella covers 🎤</span><span>side projects 💻</span><span>golf (badly) ⛳</span><span>good books 📚</span>
+        <span>tennis 🎾</span><span>pottery 🏺</span><span>dim sum hunts 🥟</span><span>EDM festivals 🎧</span><span>flight deals ✈️</span><span>acapella covers 🎤</span><span>side projects 💻</span><span>golf (badly) ⛳</span><span>good books 📚</span>
+      </div>
+    </div>
+
+    <!-- ===================== CURRENTLY ===================== -->
+    <section class="section">
+      <div class="container">
+        <span class="section-kicker reveal">life right now, in three sticky notes</span>
+        <h2 class="section-title reveal">The <span class="hl">current</span> chapter</h2>
+
+        <div class="grid-3" style="margin-top: var(--space-4);">
+          <div class="now-note now-note--a reveal">
+            <h3>🎓 Wharton MBA '27</h3>
+            <p>Finance &amp; Operations, four clubs deep, and loving every over-committed minute of it.</p>
+          </div>
+          <div class="now-note now-note--b reveal" data-delay="1">
+            <h3>🛠 Building with AI</h3>
+            <p>From pension-fund tools to PE deal support — I love putting tech to work on real problems.</p>
+            <span class="hand">ex-Google engineer, always a builder</span>
+          </div>
+          <div class="now-note now-note--c reveal" data-delay="2">
+            <h3>🧳 Next: Cambridge</h3>
+            <p>Harvard Kennedy School this fall — bringing a policy lens to the tech + capital questions I care about.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Summary Cards — 3 columns -->
-    <section class="section" style="background-color: var(--white);">
+    <!-- ===================== INDEX ROWS ===================== -->
+    <section class="section--tight">
       <div class="container">
-        <div class="grid grid--3" style="gap: var(--spacing-xl);">
+        <span class="section-kicker reveal">pick a door, any door</span>
+        <div class="index-rows" style="margin-top: var(--space-3);">
 
-          <!-- What Defines Me -->
-          <div class="card" style="text-align: center; border-top: 4px solid var(--primary);">
-            <div style="font-size: 2.5rem; margin-bottom: var(--spacing-md);">🌸</div>
-            <h2 style="font-size: var(--font-xl); margin-bottom: var(--spacing-md);">What Defines Me</h2>
-            <p style="color: var(--text-secondary); line-height: var(--line-height-relaxed); margin-bottom: var(--spacing-lg);">
-              Software engineer turned MBA candidate who loves tennis, pottery, cooking, traveling, and getting lost in a good book.
-            </p>
-            <a href="hobbies.html" class="btn btn--outline">Explore My Hobbies</a>
-          </div>
+          <a href="about.html" class="index-row reveal">
+            <span class="index-row__title"><span class="index-row__num">01</span>About</span>
+            <span class="index-row__desc">The full story — plus a flight map of everywhere this journey has taken me.</span>
+            <span class="index-row__arrow">✈</span>
+          </a>
 
-          <!-- Recent Work -->
-          <div class="card" style="text-align: center; border-top: 4px solid var(--secondary);">
-            <div style="font-size: 2.5rem; margin-bottom: var(--spacing-md);">🚀</div>
-            <h2 style="font-size: var(--font-xl); margin-bottom: var(--spacing-md);">Recent Work</h2>
-            <p style="color: var(--text-secondary); line-height: var(--line-height-relaxed); margin-bottom: var(--spacing-lg);">
-              From color palette generators to habit trackers, I love building small tools that solve real problems.
-            </p>
-            <a href="projects.html" class="btn btn--outline">View My Projects</a>
-          </div>
+          <a href="hobbies.html" class="index-row reveal">
+            <span class="index-row__title"><span class="index-row__num">02</span>Hobbies</span>
+            <span class="index-row__desc">Tennis, pottery, questionable golf, and other things that keep me human.</span>
+            <span class="index-row__arrow">→</span>
+          </a>
 
-          <!-- Latest Writing -->
-          <div class="card" style="text-align: center; border-top: 4px solid var(--accent);">
-            <div style="font-size: 2.5rem; margin-bottom: var(--spacing-md);">✍️</div>
-            <h2 style="font-size: var(--font-xl); margin-bottom: var(--spacing-md);">Latest Writing</h2>
-            <p style="color: var(--text-secondary); line-height: var(--line-height-relaxed); margin-bottom: var(--spacing-lg);">
-              Thoughts on code, learning, career pivots, and finding balance in a busy world.
-            </p>
-            <a href="blog.html" class="btn btn--outline">Read My Blog</a>
-          </div>
+          <a href="projects.html" class="index-row reveal">
+            <span class="index-row__title"><span class="index-row__num">03</span>Projects</span>
+            <span class="index-row__desc">Small tools and experiments, built for fun and for real problems.</span>
+            <span class="index-row__arrow">→</span>
+          </a>
+
+          <a href="blog.html" class="index-row reveal">
+            <span class="index-row__title"><span class="index-row__num">04</span>Blog</span>
+            <span class="index-row__desc">Field notes on code, career pivots, and finding balance.</span>
+            <span class="index-row__arrow">→</span>
+          </a>
 
         </div>
       </div>
@@ -118,25 +146,23 @@
 
   </main>
 
-  <!-- Footer -->
+  <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
-    <div class="footer__content">
-      <p class="footer__text">
-        Made with care by Jane Wang
+    <div class="container">
+      <span class="section-kicker">this could be the start of something</span>
+      <h2 class="footer__title">Let's be <em>friends</em></h2>
+      <p class="footer__blurb">
+        Always happy to chat — about a project, an idea, tennis, or where to find the best dumplings in Philly.
       </p>
       <div class="footer__links">
-        <a href="https://linkedin.com/in/janelianwang/" class="footer__link">LinkedIn</a>
-        <a href="mailto:jane2027@wharton.upenn.edu" class="footer__link">Email</a>
+        <a href="mailto:jane2027@wharton.upenn.edu" class="btn btn--fill">Email me 💌</a>
+        <a href="https://linkedin.com/in/janelianwang/" class="btn">LinkedIn ↗</a>
       </div>
-      <p class="footer__text text-light mt-sm">
-        &copy; 2026 Jane Wang. All rights reserved.
-      </p>
+      <p class="footer__fine">© 2026 Jane Wang · handmade with <span class="hand">a lot of</span> sticky notes</p>
     </div>
   </footer>
 
-  <!-- JavaScript Files -->
   <script src="js/main.js"></script>
-  <script src="js/components.js"></script>
   <script src="js/carousel.js"></script>
 
 </body>

@@ -1,334 +1,74 @@
 /**
- * MAIN.JS - Core JavaScript Functionality
- * ========================================
- * Navigation, utilities, and page initialization.
- * Vanilla JavaScript (ES6+) - no dependencies required.
+ * main.js — nav toggle, active link, scroll reveal, hero word rotator
+ * Vanilla JS, no dependencies.
  */
 
-
-/* ==================
-   DOM Ready Initialization
-   ================== */
-
-/**
- * Initialize all functionality when DOM is fully loaded
- */
 document.addEventListener('DOMContentLoaded', () => {
-  initNavigation();
-  initSmoothScroll();
-  setActiveNavLink();
+  initNav();
+  initReveal();
+  initRotator();
 });
 
+/* Mobile nav toggle + current-page marker */
+function initNav() {
+  const toggle = document.querySelector('.nav__toggle');
+  const links = document.querySelector('.nav__links');
 
-/* ==================
-   Navigation Functions
-   ================== */
-
-/**
- * Initialize navigation functionality
- * Sets up mobile menu toggle and responsive behavior
- */
-function initNavigation() {
-  const toggle = document.querySelector('.navbar__toggle');
-  const nav = document.querySelector('.navbar__nav');
-
-  if (!toggle || !nav) return;
-
-  // Toggle mobile menu on button click
-  toggle.addEventListener('click', () => {
-    nav.classList.toggle('navbar__nav--open');
-    toggle.setAttribute(
-      'aria-expanded',
-      nav.classList.contains('navbar__nav--open')
-    );
-  });
-
-  // Close mobile menu when clicking a link
-  const navLinks = document.querySelectorAll('.navbar__link');
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (window.innerWidth < 768) {
-        nav.classList.remove('navbar__nav--open');
-        toggle.setAttribute('aria-expanded', 'false');
-      }
+  if (toggle && links) {
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(open));
     });
-  });
-
-  // Close mobile menu when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.navbar') && nav.classList.contains('navbar__nav--open')) {
-      nav.classList.remove('navbar__nav--open');
-      toggle.setAttribute('aria-expanded', 'false');
-    }
-  });
-
-  // Handle window resize - close mobile menu on desktop
-  let resizeTimer;
-  window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-      if (window.innerWidth >= 768) {
-        nav.classList.remove('navbar__nav--open');
-        toggle.setAttribute('aria-expanded', 'false');
-      }
-    }, 250);
-  });
-}
-
-
-/**
- * Set active navigation link based on current page
- * Highlights the current page in the navigation menu
- */
-function setActiveNavLink() {
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  const navLinks = document.querySelectorAll('.navbar__link');
-
-  navLinks.forEach(link => {
-    const linkPage = link.getAttribute('href');
-
-    // Check if this link matches the current page
-    if (linkPage === currentPage ||
-        (currentPage === '' && linkPage === 'index.html') ||
-        (currentPage === '/' && linkPage === 'index.html')) {
-      link.classList.add('navbar__link--active');
-      link.setAttribute('aria-current', 'page');
-    } else {
-      link.classList.remove('navbar__link--active');
-      link.removeAttribute('aria-current');
-    }
-  });
-}
-
-
-/* ==================
-   Smooth Scrolling
-   ================== */
-
-/**
- * Initialize smooth scrolling for anchor links
- * Enables smooth scroll to sections within the page
- */
-function initSmoothScroll() {
-  const anchorLinks = document.querySelectorAll('a[href^="#"]');
-
-  anchorLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      const targetId = link.getAttribute('href');
-
-      // Skip if href is just "#"
-      if (targetId === '#') return;
-
-      const targetElement = document.querySelector(targetId);
-
-      if (targetElement) {
-        e.preventDefault();
-
-        // Calculate offset for fixed header
-        const headerHeight = document.querySelector('.navbar')?.offsetHeight || 0;
-        const targetPosition = targetElement.offsetTop - headerHeight;
-
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
-
-        // Update URL without jumping
-        history.pushState(null, '', targetId);
-      }
-    });
-  });
-}
-
-
-/* ==================
-   Utility Functions
-   ================== */
-
-/**
- * Debounce function to limit function execution rate
- * @param {Function} func - Function to debounce
- * @param {number} wait - Wait time in milliseconds
- * @returns {Function} Debounced function
- */
-function debounce(func, wait) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}
-
-
-/**
- * Throttle function to limit function execution frequency
- * @param {Function} func - Function to throttle
- * @param {number} limit - Time limit in milliseconds
- * @returns {Function} Throttled function
- */
-function throttle(func, limit) {
-  let inThrottle;
-  return function executedFunction(...args) {
-    if (!inThrottle) {
-      func.apply(this, args);
-      inThrottle = true;
-      setTimeout(() => inThrottle = false, limit);
-    }
-  };
-}
-
-
-/**
- * Check if an element is in viewport
- * @param {HTMLElement} element - Element to check
- * @returns {boolean} True if element is in viewport
- */
-function isInViewport(element) {
-  const rect = element.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
-
-
-/**
- * Animate elements when they scroll into view
- * Usage: Add 'data-animate' attribute to elements you want to animate
- */
-function initScrollAnimations() {
-  const animatedElements = document.querySelectorAll('[data-animate]');
-
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const animationClass = entry.target.getAttribute('data-animate');
-        entry.target.classList.add(animationClass);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  animatedElements.forEach(element => {
-    observer.observe(element);
-  });
-}
-
-// Initialize scroll animations if elements exist
-if (document.querySelectorAll('[data-animate]').length > 0) {
-  initScrollAnimations();
-}
-
-
-/* ==================
-   Form Handling (for future use)
-   ================== */
-
-/**
- * Basic form validation helper
- * @param {HTMLFormElement} form - Form element to validate
- * @returns {boolean} True if form is valid
- */
-function validateForm(form) {
-  const requiredFields = form.querySelectorAll('[required]');
-  let isValid = true;
-
-  requiredFields.forEach(field => {
-    if (!field.value.trim()) {
-      isValid = false;
-      field.classList.add('error');
-
-      // Remove error class on input
-      field.addEventListener('input', () => {
-        field.classList.remove('error');
-      }, { once: true });
-    }
-  });
-
-  return isValid;
-}
-
-
-/* ==================
-   Theme Toggle (for future implementation)
-   ================== */
-
-/**
- * Toggle between light and dark themes
- * Currently a placeholder for future dark mode implementation
- */
-function toggleTheme() {
-  const currentTheme = document.documentElement.getAttribute('data-theme');
-  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-  document.documentElement.setAttribute('data-theme', newTheme);
-  localStorage.setItem('theme', newTheme);
-}
-
-/**
- * Load saved theme preference
- */
-function loadThemePreference() {
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-    document.documentElement.setAttribute('data-theme', savedTheme);
   }
-}
 
-
-/* ==================
-   Performance Utilities
-   ================== */
-
-/**
- * Lazy load images for better performance
- * Usage: Use data-src instead of src for images
- */
-function initLazyLoading() {
-  const lazyImages = document.querySelectorAll('img[data-src]');
-
-  const imageObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        img.src = img.dataset.src;
-        img.removeAttribute('data-src');
-        imageObserver.unobserve(img);
-      }
-    });
+  // Mark the current page in the nav
+  const here = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav__link').forEach((a) => {
+    const target = a.getAttribute('href');
+    if (target === here) a.setAttribute('aria-current', 'page');
   });
-
-  lazyImages.forEach(img => imageObserver.observe(img));
 }
 
-// Initialize lazy loading if images exist
-if (document.querySelectorAll('img[data-src]').length > 0) {
-  initLazyLoading();
+/* Reveal-on-scroll for any element with .reveal */
+function initReveal() {
+  const els = document.querySelectorAll('.reveal');
+  if (!els.length) return;
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  els.forEach((el) => io.observe(el));
 }
 
+/* Rotating word in the hero — reads phrases from data-phrases (JSON array) */
+function initRotator() {
+  const el = document.querySelector('.rotator');
+  if (!el) return;
 
-/* ==================
-   Export for Module Use (optional)
-   ================== */
+  let phrases;
+  try {
+    phrases = JSON.parse(el.dataset.phrases);
+  } catch {
+    return;
+  }
+  if (!Array.isArray(phrases) || phrases.length < 2) return;
 
-// If using as a module, export functions
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = {
-    debounce,
-    throttle,
-    isInViewport,
-    validateForm,
-    toggleTheme
-  };
+  let i = 0;
+  setInterval(() => {
+    el.classList.add('is-swapping');
+    setTimeout(() => {
+      i = (i + 1) % phrases.length;
+      el.textContent = phrases[i];
+      el.classList.remove('is-swapping');
+    }, 300);
+  }, 2600);
 }
